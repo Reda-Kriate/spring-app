@@ -23,7 +23,7 @@ public class CustomerControl {
         return customerSrv.getCustomersById(id);
     }
 
-    @GetMapping
+    @PostMapping
     public void registerCustomer( @RequestBody CustomerRegistrationRequest request){
         customerSrv.addCustomer(request);
     }

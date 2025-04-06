@@ -30,6 +30,6 @@ public class CustomerJpaDataAccessService implements DaoCustomerInt{
 
     @Override
     public boolean existsCustomerWithEmail(String email) {
-        return customerRepository.existsCustomerEmail(email);
+        return customerRepository.existsByEmail(email);
     }
 }

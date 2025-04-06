@@ -1,8 +1,4 @@
-#server:
-#  port: 8080
-#  error:
-#    include-message: always
-#
+
 #spring:
 #  main:
 #    web-application-type: servlet
@@ -21,7 +17,14 @@
 #        dialect: org.hibernate.dialect.PostgreSQLDialect
 #        format_sql: true
 #    show-sql: false
+server:
+  port: 8080
+  error:
+    include-message: always
+
 spring:
+  main:
+     web-application-type: servlet
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5433/customer
@@ -38,7 +41,7 @@ spring:
          ddl-auto: create-drop
       properties:
         hibernate:
-#          dialect: org.hibernate.dialect.PostgreSQLDialect // unitile depuis hibernate 6
+          dialect: org.hibernate.dialect.PostgreSQLDialect
           format_sql: true
           connection:
             provider_disables_autocommit: true

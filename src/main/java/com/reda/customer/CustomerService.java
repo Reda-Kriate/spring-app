@@ -1,6 +1,6 @@
-package com.kre.arch.customer;
+package com.reda.customer;
 
-import com.kre.exception.NotFound;
+import com.reda.exception.NotFound;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 

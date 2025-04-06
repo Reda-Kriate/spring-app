@@ -1,4 +1,4 @@
-package com.kre.arch.customer;
+package com.reda.customer;
 
 import jakarta.persistence.*;
 

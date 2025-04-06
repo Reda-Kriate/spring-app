@@ -1,13 +1,12 @@
-package com.kre;
+package com.reda;
 
-import com.kre.arch.customer.Customer;
-import com.kre.arch.customer.CustomerRepository;
+import com.reda.customer.Customer;
+import com.reda.customer.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication

@@ -7,4 +7,6 @@ public interface DaoCustomerInt {
     Optional<Customer> selectById(Integer id);
     void insertCustomer(Customer customer);
     boolean existsCustomerWithEmail(String email);
+    void deleteCustomer(Integer id);
+    boolean existsCustomerWithId(Integer id);
 }

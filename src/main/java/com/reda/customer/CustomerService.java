@@ -35,4 +35,10 @@ public class CustomerService {
         daoCustomerInt.insertCustomer(customer);
 
     }
+    public void deleteCustomer(Integer id){
+        if(!daoCustomerInt.existsCustomerWithId(id)){
+            throw new NotFoundException("ID [%s] not found !".formatted(id));
+        }
+        daoCustomerInt.deleteCustomer(id);
+    }
 }

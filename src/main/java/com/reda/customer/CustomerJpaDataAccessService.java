@@ -22,4 +22,14 @@ public class CustomerJpaDataAccessService implements DaoCustomerInt{
     public Optional<Customer> selectById(Integer id) {
         return customerRepository.findById(id);
     }
+
+    @Override
+    public void insertCustomer(Customer customer) {
+        customerRepository.save(customer);
+    }
+
+    @Override
+    public boolean existsCustomerWithEmail(String email) {
+        return customerRepository.existsCustomerEmail(email);
+    }
 }

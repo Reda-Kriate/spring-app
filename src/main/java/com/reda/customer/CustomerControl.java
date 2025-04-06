@@ -1,12 +1,11 @@
 package com.reda.customer;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/v1/customer")
 public class CustomerControl {
     private final CustomerService customerSrv;
 
@@ -14,13 +13,18 @@ public class CustomerControl {
         this.customerSrv = customerSrv;
     }
 
-    @GetMapping("/api/v1/customer")
+    @GetMapping
     public List<Customer> getCustomers(){
         return customerSrv.getAllCustomers();
     }
 
-    @GetMapping("/api/v1/customer/{id}")
+    @GetMapping("{id}")
     public Customer getCustomers(@PathVariable("id") Integer id){
         return customerSrv.getCustomersById(id);
+    }
+
+    @GetMapping
+    public void registerCustomer( @RequestBody CustomerRegistrationRequest request){
+        customerSrv.addCustomer(request);
     }
 }

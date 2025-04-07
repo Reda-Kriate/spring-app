@@ -2,6 +2,7 @@ package com.reda.customer;
 
 import com.reda.exception.DuplicateResourceException;
 import com.reda.exception.NotFoundException;
+import com.reda.exception.RequestValidationException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
@@ -40,5 +41,33 @@ public class CustomerService {
             throw new NotFoundException("ID [%s] not found !".formatted(id));
         }
         daoCustomerInt.deleteCustomer(id);
+    }
+
+    public void updateById(Integer id,CustomerUpdateRegistration update){
+        boolean changes = false;
+        Customer customer = getCustomersById(id);
+
+        if(update.name() != null && !update.name().equals(customer.getName())){
+            customer.setName(update.name());
+            daoCustomerInt.insertCustomer(customer);
+            changes = true;
+        }
+        if(update.age() != null && !update.age().equals(customer.getAge())){
+            customer.setAge(update.age());
+            daoCustomerInt.insertCustomer(customer);
+            changes = true;
+        }
+        if(update.email() != null && !update.email().equals(customer.getEmail())) {
+            if (daoCustomerInt.existsCustomerWithEmail(update.email())) {
+                throw new DuplicateResourceException("Email already taken !");
+            } else {
+                customer.setEmail(update.email());
+                daoCustomerInt.insertCustomer(customer);
+                changes = true;
+            }
+        }
+        if (!changes){
+            throw new RequestValidationException("no data source changes !");
+        }
     }
 }

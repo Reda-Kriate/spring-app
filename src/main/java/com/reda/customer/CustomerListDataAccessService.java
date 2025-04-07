@@ -56,4 +56,9 @@ public class CustomerListDataAccessService implements DaoCustomerInt{
     public boolean existsCustomerWithId(Integer id) {
         return customers.stream().anyMatch(customer -> customer.getId().equals(id));
     }
+
+    @Override
+    public void updateCustomerWithId(Customer update) {
+         customers.add(update);
+    }
 }

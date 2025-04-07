@@ -9,4 +9,5 @@ public interface DaoCustomerInt {
     boolean existsCustomerWithEmail(String email);
     void deleteCustomer(Integer id);
     boolean existsCustomerWithId(Integer id);
+    void updateCustomerWithId(Customer update);
 }

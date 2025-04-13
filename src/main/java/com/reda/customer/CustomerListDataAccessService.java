@@ -30,10 +30,8 @@ public class CustomerListDataAccessService implements DaoCustomerInt{
         return customers.stream()
                 .filter( cus -> cus.getId().equals(id))
                 .findFirst();
-
-
-
     }
+
 
     @Override
     public void insertCustomer(Customer customer) {

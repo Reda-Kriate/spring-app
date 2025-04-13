@@ -14,7 +14,7 @@ public class CustomerService {
     private final DaoCustomerInt daoCustomerInt;
 
 
-    public CustomerService(@Qualifier("jpa") DaoCustomerInt daoCustomerInt) {
+    public CustomerService(@Qualifier("jdbc") DaoCustomerInt daoCustomerInt) {
         this.daoCustomerInt = daoCustomerInt;
     }
     public List<Customer> getAllCustomers(){
@@ -51,12 +51,12 @@ public class CustomerService {
 
         if(update.name() != null && !update.name().equals(customer.getName())){
             customer.setName(update.name());
-            daoCustomerInt.insertCustomer(customer);
+            daoCustomerInt.updateCustomerWithId(customer);
             changes = true;
         }
         if(update.age() != null && !update.age().equals(customer.getAge())){
             customer.setAge(update.age());
-            daoCustomerInt.insertCustomer(customer);
+            daoCustomerInt.updateCustomerWithId(customer);
             changes = true;
         }
         if(update.email() != null && !update.email().equals(customer.getEmail())) {
@@ -64,7 +64,7 @@ public class CustomerService {
                 throw new DuplicateResourceException("Email already taken !");
             } else {
                 customer.setEmail(update.email());
-                daoCustomerInt.insertCustomer(customer);
+                daoCustomerInt.updateCustomerWithId(customer);
                 changes = true;
             }
         }

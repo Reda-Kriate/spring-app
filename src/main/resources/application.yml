@@ -1,4 +1,4 @@
-
+#
 #spring:
 #  main:
 #    web-application-type: servlet
@@ -11,43 +11,28 @@
 #
 #  jpa:
 #    hibernate:
-#      ddl-auto: create-drop
+#      ddl-auto: none
 #    properties:
 #      hibernate:
 #        dialect: org.hibernate.dialect.PostgreSQLDialect
 #        format_sql: true
-#    show-sql: false
+#    show-sql: true
 server:
   port: 8080
   error:
     include-message: always
-
 spring:
   main:
      web-application-type: servlet
   datasource:
-    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5433/customer
     username: redakriate
     password: reda12
-    hikari:
-      auto-commit: false
-      transaction-isolation: TRANSACTION_READ_COMMITTED
-      minimum-idle: 5
-      maximum-pool-size: 20
   jpa:
-      open-in-view: false
       hibernate:
-         ddl-auto: create-drop
+         ddl-auto: none
       properties:
         hibernate:
           dialect: org.hibernate.dialect.PostgreSQLDialect
           format_sql: true
-          connection:
-            provider_disables_autocommit: true
-            isolation: 2
-      show-sql: false
-  logging:
-    level:
-      org.hibernate.SQL: DEBUG
-      org.hibernate.orm.jdbc.bind: TRACE
+      show-sql: true

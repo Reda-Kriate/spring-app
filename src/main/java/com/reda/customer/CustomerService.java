@@ -24,6 +24,7 @@ public class CustomerService {
         return daoCustomerInt.selectById(id)
                 .orElseThrow(()-> new NotFoundException("customer with id [%s] not found".formatted(id)));
     }
+
     public void addCustomer(CustomerRegistrationRequest customerRegistrationRequest){
         //check email exists
         if(daoCustomerInt.existsCustomerWithEmail(customerRegistrationRequest.email())){
@@ -36,6 +37,7 @@ public class CustomerService {
         daoCustomerInt.insertCustomer(customer);
 
     }
+
     public void deleteCustomer(Integer id){
         if(!daoCustomerInt.existsCustomerWithId(id)){
             throw new NotFoundException("ID [%s] not found !".formatted(id));

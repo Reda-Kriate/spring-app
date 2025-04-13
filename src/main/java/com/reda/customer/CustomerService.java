@@ -14,7 +14,7 @@ public class CustomerService {
     private final DaoCustomerInt daoCustomerInt;
 
 
-    public CustomerService(@Qualifier("jpa") DaoCustomerInt daoCustomerInt) {
+    public CustomerService(@Qualifier("jdbc") DaoCustomerInt daoCustomerInt) {
         this.daoCustomerInt = daoCustomerInt;
     }
     public List<Customer> getAllCustomers(){

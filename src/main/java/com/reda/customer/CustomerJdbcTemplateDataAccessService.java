@@ -10,9 +10,10 @@ import java.util.Optional;
 public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
 
     private final JdbcTemplate jdbcTemplate;
-
-    public CustomerJdbcTemplateDataAccessService(JdbcTemplate jdbcTemplate) {
+    private final CustomerRowMapper customerRowMapper;
+    public CustomerJdbcTemplateDataAccessService(JdbcTemplate jdbcTemplate, CustomerRowMapper customerRowMapper) {
         this.jdbcTemplate = jdbcTemplate;
+        this.customerRowMapper = customerRowMapper;
     }
 
     @Override
@@ -22,22 +23,18 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
                 FROM customer
                 """;
 
-        List<Customer> customers = jdbcTemplate.query(sql,(rs,rowNum)->{
-            Customer customer = new Customer(
-                    rs.getInt("id"),
-                    rs.getString("name"),
-                    rs.getInt("age"),
-                    rs.getString("email")
-            );
-            return customer;
-        });
-
-        return customers;
+        return jdbcTemplate.query(sql,customerRowMapper);
     }
 
     @Override
     public Optional<Customer> selectById(Integer id) {
-        return Optional.empty();
+        var sql = """
+                SELECT id, name, age, email
+                FROM customer
+                WHERE id = ?
+                """;
+
+        return jdbcTemplate.query(sql, customerRowMapper,id).stream().findFirst();
     }
 
     @Override
@@ -54,21 +51,59 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
 
     @Override
     public boolean existsCustomerWithEmail(String email) {
-        return false;
+        var sql = """
+                SELECT COUNT(id)
+                FROM customer
+                WHERE email = ?
+                """;
+
+        Integer count = jdbcTemplate.queryForObject(sql,Integer.class, email);
+        return count != null && count > 0;
     }
 
     @Override
     public void deleteCustomer(Integer id) {
+        var sql = """
+                DELETE FROM customer
+                WHERE id = ?
+                """;
 
+        jdbcTemplate.update(sql,id);
+        
     }
 
     @Override
     public boolean existsCustomerWithId(Integer id) {
-        return false;
+        var sql = """
+                SELECT COUNT(id)
+                FROM customer
+                WHERE id = ?
+                """;
+
+        Integer count = jdbcTemplate.queryForObject(sql,Integer.class, id);
+        return count != null && count > 0;
     }
 
     @Override
     public void updateCustomerWithId(Customer update) {
+        if(update.getName() != null){
+            var sql = """
+                    UPDATE customer SET name = ? WHERE id = ?
+                    """;
+            jdbcTemplate.update(sql,update.getName(),update.getId());
+        }
+        if(update.getAge() != null){
+            var sql = """
+                    UPDATE customer SET age = ? WHERE id = ?
+                    """;
+            jdbcTemplate.update(sql,update.getAge(),update.getId());
+        }
+        if(update.getEmail() != null){
+            var sql = """
+                    UPDATE customer SET email = ? WHERE id = ?
+                    """;
+            jdbcTemplate.update(sql,update.getEmail(),update.getId());
+        }
 
     }
 }

@@ -13,13 +13,15 @@ public class CustomerService {
 
     private final DaoCustomerInt daoCustomerInt;
 
-
-    public CustomerService(@Qualifier("jdbc") DaoCustomerInt daoCustomerInt) {
+    public final String variable = "jdbc";
+    public CustomerService(@Qualifier(variable) DaoCustomerInt daoCustomerInt) {
         this.daoCustomerInt = daoCustomerInt;
     }
+
     public List<Customer> getAllCustomers(){
         return daoCustomerInt.selectAllCustomers();
     }
+
     public Customer getCustomersById(Integer id){
         return daoCustomerInt.selectById(id)
                 .orElseThrow(()-> new NotFoundException("customer with id [%s] not found".formatted(id)));

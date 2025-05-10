@@ -85,24 +85,24 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
     }
 
     @Override
-    public void updateCustomerWithId(Customer update) {
-        if(update.getName() != null){
+    public void updateCustomerWithId(Customer customer) {
+        if(customer.getName() != null){
             var sql = """
                     UPDATE customer SET name = ? WHERE id = ?
                     """;
-            jdbcTemplate.update(sql,update.getName(),update.getId());
+            jdbcTemplate.update(sql,customer.getName(),customer.getId());
         }
-        if(update.getAge() != null){
+        if(customer.getAge() != null){
             var sql = """
                     UPDATE customer SET age = ? WHERE id = ?
                     """;
-            jdbcTemplate.update(sql,update.getAge(),update.getId());
+            jdbcTemplate.update(sql,customer.getAge(),customer.getId());
         }
-        if(update.getEmail() != null){
+        if(customer.getEmail() != null){
             var sql = """
                     UPDATE customer SET email = ? WHERE id = ?
                     """;
-            jdbcTemplate.update(sql,update.getEmail(),update.getId());
+            jdbcTemplate.update(sql,customer.getEmail(),customer.getId());
         }
 
     }

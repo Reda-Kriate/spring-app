@@ -1,4 +1,4 @@
-package reda;
+package com.reda.customer.testContConfig;
 
 import com.github.javafaker.Faker;
 import org.flywaydb.core.Flyway;

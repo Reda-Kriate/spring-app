@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.ApplicationContext;
-import reda.AbstractTestcontainers;
+import com.reda.customer.testContConfig.AbstractTestcontainers;
 
 import java.util.UUID;
 

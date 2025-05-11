@@ -9,7 +9,7 @@ services:
     volumes:
        - db:/data/postgres
     ports:
-       - "5433:5432"
+       - "5433:5432"kriate
     networks:
     - db
     restart: unless-stopped

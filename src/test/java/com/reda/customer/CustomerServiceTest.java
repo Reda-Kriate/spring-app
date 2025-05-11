@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
@@ -43,9 +42,11 @@ class CustomerServiceTest {
     @Test
     void getCustomersById() {
         //GIVEN
-        int id = 1;
+        int id = 10;
         Customer customer = new Customer(
-                "reda",22,"reda@test-Mockito"
+                "com/reda/customer/testContConfig",
+                22,
+                "reda@test-Mockito"
         );
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(customer));
         //WHEN
@@ -73,7 +74,7 @@ class CustomerServiceTest {
         String email = "reda@test.com";
         when(daoCustomerInt.existsCustomerWithEmail(email)).thenReturn(false);
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "reda",21,email
+                "com/reda/customer/testContConfig",21,email
         );
         //WHEN
         //ajouter customer
@@ -102,7 +103,7 @@ class CustomerServiceTest {
         String email = "reda@mockito";
         when(daoCustomerInt.existsCustomerWithEmail(email)).thenReturn(true);
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "reda",22,email
+                "com/reda/customer/testContConfig",22,email
         );
         //WHEN
         assertThatThrownBy(()-> underTest.addCustomer(request))
@@ -111,8 +112,6 @@ class CustomerServiceTest {
         //THEN
         //verifier si la methode n'a pas execute
         verify(daoCustomerInt,never()).insertCustomer(any());
-
-
     }
     @Test
     void deleteCustomer() {
@@ -139,8 +138,10 @@ class CustomerServiceTest {
     void updateByIdWhenNameNotEqualNullAndChanged() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id,"reda",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("abdo", 50, "test");
+        Customer existingCustomer = new Customer(
+                id, "com/reda/customer/testContConfig",50,"test");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration(
+                "abdo", 50, "test");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
 
@@ -161,8 +162,8 @@ class CustomerServiceTest {
     void updateByIdWhenAgeNotEqualNullAndChanged() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id,"reda",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("reda", 22, "test");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 22, "test");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
         ArgumentCaptor<Customer> argumentCaptor = ArgumentCaptor.forClass(Customer.class);
@@ -180,8 +181,8 @@ class CustomerServiceTest {
     void updateByIdWhenEmailNotEqualNullAndChangedAndEmailNotExist() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id,"reda",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("reda", 50, "test@test");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test@test");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
         when(daoCustomerInt.existsCustomerWithEmail("test@test")).thenReturn(false);
@@ -199,8 +200,8 @@ class CustomerServiceTest {
     void updateByIdWhenEmailNotEqualNullAndChangedAndEmailExist() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id,"reda",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("reda", 50, "test@test");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test@test");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
         when(daoCustomerInt.existsCustomerWithEmail("test@test")).thenReturn(true);
@@ -215,11 +216,10 @@ class CustomerServiceTest {
     void updateByIdNothingChanged() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id,"reda",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("reda", 50, "test");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
-        ArgumentCaptor<Customer> argumentCaptor = ArgumentCaptor.forClass(Customer.class);
 
         assertThatThrownBy(()-> underTest.updateById(id,update)).isInstanceOf(RequestValidationException.class)
                 .hasMessageContaining("no data source changes !");

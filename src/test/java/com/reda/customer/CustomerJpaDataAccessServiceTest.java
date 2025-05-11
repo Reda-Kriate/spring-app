@@ -15,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 
 class CustomerJpaDataAccessServiceTest {
+
     private CustomerJpaDataAccessService underTest;
     @Mock private CustomerRepository customerRepository;
     AutoCloseable autoCloseable;
@@ -109,7 +110,5 @@ class CustomerJpaDataAccessServiceTest {
 
         //THEN
         verify(customerRepository).save(customer);
-
-
     }
 }

@@ -1,16 +1,15 @@
 package com.reda.customer;
 
-import net.bytebuddy.NamingStrategy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import reda.AbstractTestcontainers;
+import com.reda.customer.testContConfig.AbstractTestcontainers;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+
 class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
 
     private CustomerJdbcTemplateDataAccessService underTest;

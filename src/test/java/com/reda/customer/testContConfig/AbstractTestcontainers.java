@@ -6,13 +6,16 @@ import org.junit.jupiter.api.BeforeAll;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.sql.DataSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Testcontainers
 public class AbstractTestcontainers {
 
     @BeforeAll
@@ -30,6 +33,7 @@ public class AbstractTestcontainers {
             flyway.migrate();
             System.out.println();
     }
+
 
     @Container
     protected static final PostgreSQLContainer<?> postgresqlcontainer =

@@ -1,7 +1,6 @@
 package com.reda.journeyControler;
 
 import com.github.javafaker.Faker;
-import com.github.javafaker.Name;
 import com.reda.customer.Customer;
 import com.reda.customer.CustomerRegistrationRequest;
 import com.reda.customer.CustomerUpdateRegistration;
@@ -21,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-public class CustomerControlTest {
+public class CustomerIntegrationTest {
     @Autowired
     private WebTestClient webTestClient;
 

@@ -25,7 +25,7 @@ class CustomerRepositoryTest extends AbstractTestcontainers {
 
     @BeforeEach
     void setUp() {
-        underTest.deleteAll();
+//        underTest.deleteAll();
         System.out.println("bean count : " + applicationContext.getBeanDefinitionCount());
     }
 

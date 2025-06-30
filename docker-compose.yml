@@ -4,16 +4,30 @@ services:
     image: postgres
     environment:
       POSTGRES_USER: redakriate
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: redareda
+      POSTGRES_DB: customer
       PGDATA: /data/postgres
     volumes:
-       - db:/data/postgres
+      - db:/data/postgres
     ports:
-       - "5433:5432"kriate
+      - "5433:5432"
     networks:
-    - db
+      - db
     restart: unless-stopped
-
+  reda-spring-app-api:
+    container_name: reda-spring-app-api
+    image: redakriate/spring-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/customer
+      SPRING_DATASOURCE_USERNAME: redakriate
+      SPRING_DATASOURCE_PASSWORD: redareda
+    ports:
+      - "8080:8080"
+    networks:
+      - db
+    depends_on:
+      - db
+    restart: unless-stopped
 networks:
   db:
     driver: bridge

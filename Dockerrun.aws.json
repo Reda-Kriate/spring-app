@@ -1,0 +1,31 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "reda-spring-app-api",
+      "image": "redakriate/spring-app:latest",
+      "essential": true,
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8081
+        }
+      ],
+      "environment": [
+        {
+          "name": "SPRING_DATASOURCE_URL",
+          "value": "jdbc:postgresql://awseb-e-9bqpqemhp9-stack-awsebrdsdatabase-beij2dlxbb7i.c2lk4222y0it.us-east-1.rds.amazonaws.com:5432/customer"
+        },
+        {
+          "name": "SPRING_DATASOURCE_USERNAME",
+          "value": "redakriate"
+        },
+        {
+          "name": "SPRING_DATASOURCE_PASSWORD",
+          "value": "redareda"
+        }
+      ]
+    }
+  ]
+}

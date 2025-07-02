@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../APP2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../JavaLearn/goldLib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Nike-Website" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../StudentManag" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../StudentManag/studentManagement" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ecommerce projects" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ecommerce projects/ecommerce" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ecommerce projects/ecommerce-strapi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ecommerce projects/ecommerce-strapi/Ecommerce-backend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../next-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../tailwind website" vcs="Git" />
+  </component>
+</project>

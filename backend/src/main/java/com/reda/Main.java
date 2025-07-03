@@ -14,7 +14,6 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class,args);
-
     }
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
@@ -27,7 +26,7 @@ public class Main {
 
             Customer customer = new Customer(FirstName+" "+LastName,
                                             random.nextInt(17,70),
-                            FirstName+"."+LastName+"@redondo.com");
+                            FirstName+"."+LastName+"@hbibna.com");
             customerRepository.save(customer);
         };
     }

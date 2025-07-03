@@ -30,7 +30,7 @@ public class Main {
             Customer customer = new Customer(FirstName+" "+LastName,
                                             random.nextInt(17,70),
                             FirstName+"."+LastName+"@redondo.com");
-//            customerRepository.save(customer);
+            customerRepository.save(customer);
         };
     }
 

@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$/../APP2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../JavaLearn/goldLib" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Nike-Website" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../StudentManag" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../StudentManag/studentManagement" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../ecommerce projects" vcs="Git" />

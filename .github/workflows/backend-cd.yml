@@ -7,6 +7,8 @@ on:
       - backend/**
     branches:
       - main
+permissions:
+  contents: write
 
 jobs:
   deploy:

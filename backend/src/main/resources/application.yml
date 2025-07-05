@@ -6,7 +6,7 @@ spring:
   main:
     web-application-type: servlet
   datasource:
-    url: jdbc:postgresql://localhost:5433/customer
+    url: jdbc:postgresql://localhost:5432/customer
     username: redakriate
     password: redareda
   jpa:

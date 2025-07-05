@@ -1,7 +1,7 @@
 name: CD - Deploy backend
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
   push:
     paths:
       - ./backend/**

@@ -10,10 +10,6 @@
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerrun.aws.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerrun.aws.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce" afterDir="false" />
@@ -5992,8 +5988,8 @@
       <list>
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="workflow" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -6332,7 +6328,7 @@
       <workItem from="1751409062265" duration="1451000" />
       <workItem from="1751469156130" duration="5918000" />
       <workItem from="1751478612595" duration="166000" />
-      <workItem from="1751478791293" duration="25885000" />
+      <workItem from="1751478791293" duration="26242000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

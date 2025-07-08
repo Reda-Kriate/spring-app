@@ -35,3 +35,5 @@ jobs:
           cache: 'maven'
       - name: build et run Unit/Integration tests with maven
         run: mvn -ntp -B verify
+      - name: l'envoie de notification
+        run: curl -X POST -H '${{secrets.CONTENT_TYPE_SLACK}}' --data '{"text":"Workflow CI est terminée avec succés"}' ${{secrets.SLACK_URL}}

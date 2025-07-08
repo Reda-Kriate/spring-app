@@ -10,6 +10,6 @@ class De3bolController {
 
     @GetMapping("/de3bol")
     public De3bol getDe3bol(){
-        return new De3bol("hbiiiiiiib gelbiiiiiiiiii 7ammoud anas mzaater hbibnaaa et de3bol lkbir hbibnaa optional 🥰");
+        return new De3bol("hbiiiiiiiib gelbiiiiiiiiii 7ammoud anas mzaater hbibnaaa et de3bol lkbir hbibnaa optional 🥰");
     }
 }

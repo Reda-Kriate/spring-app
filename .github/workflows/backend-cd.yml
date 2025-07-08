@@ -48,10 +48,11 @@ jobs:
       - name: Build Package Push with maven
         run: mvn -ntp -B verify -Djib.to.image=docker.io/${{ secrets.DOCKERHUB_USERNAME }}/spring-app:${{ steps.build-number.outputs.BUILD_NUMBER }} jib:build
       - name: l'envoie de notification
-#        run: curl -X POST -H "${{secrets.CONTENT_TYPE_SLACK}}" --data "{"text":"l'Image est crée avec succés."}" ${{secrets.SLACK_URL}}
-        run: curl -X POST -H "${{ secrets.CONTENT_TYPE_SLACK }}" \
-          --data "{\"text\":\"L'Image est créée avec succès.\"}" \
-          ${{ secrets.SLACK_URL }}
+        run: |
+          curl -X POST \
+            -H 'Content-type: application/json' \
+            --data "{\"text\":\"Image est crée avec succès.\"}" \
+            "${{ secrets.SLACK_URL }}"
       - name: Mis a jour Dockerrun.aws.json
         run: |
           echo "Dockerrun.aws.json before updating tag"
@@ -70,7 +71,11 @@ jobs:
           region: ${{ secrets.AWS_REGION}}
           deployment_package: backend/Dockerrun.aws.json
       - name: l'envoie de notification
-        run: curl -X POST -H '${{secrets.CONTENT_TYPE_SLACK}}' --data '{"text":"Déploiement est terminée avec succées."}' ${{secrets.SLACK_URL}}
+        run: |
+          curl -X POST \
+            -H 'Content-type: application/json' \
+            --data "{\"text\":\"Déploiement est terminé avec succés\"}" \
+            "${{ secrets.SLACK_URL }}"
       - name: Commit and Push Dockerrun.aws.json
         run: |
           git config user.name github-actions
@@ -79,4 +84,9 @@ jobs:
           git commit -m "Update Dockerrun.aws.json docker image with new tag ${{steps.build-number.outputs.BUILD_NUMBER}}"
           git push
       - name: l'envoie de notification
-        run: curl -X POST -H '${{secrets.CONTENT_TYPE_SLACK}}' --data '{"text":"CI workflow est terminée avec succés."}' ${{secrets.SLACK_URL}}
+        if: always()
+        run: |
+          curl -X POST \
+          -H 'Content-type: application/json' \
+          --data "{\"text\":\"Workflow Statuts : ${{job.status}}\"}" \
+          "${{ secrets.SLACK_URL }}"

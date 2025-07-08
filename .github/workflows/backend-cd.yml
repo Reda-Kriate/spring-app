@@ -48,7 +48,10 @@ jobs:
       - name: Build Package Push with maven
         run: mvn -ntp -B verify -Djib.to.image=docker.io/${{ secrets.DOCKERHUB_USERNAME }}/spring-app:${{ steps.build-number.outputs.BUILD_NUMBER }} jib:build
       - name: l'envoie de notification
-        run: curl -X POST -H '${{secrets.CONTENT_TYPE_SLACK}}' --data '{"text":"l'Image est crée avec succés."}' ${{secrets.SLACK_URL}}
+#        run: curl -X POST -H "${{secrets.CONTENT_TYPE_SLACK}}" --data "{"text":"l'Image est crée avec succés."}" ${{secrets.SLACK_URL}}
+        run: curl -X POST -H "${{ secrets.CONTENT_TYPE_SLACK }}" \
+          --data "{\"text\":\"L'Image est créée avec succès.\"}" \
+          ${{ secrets.SLACK_URL }}
       - name: Mis a jour Dockerrun.aws.json
         run: |
           echo "Dockerrun.aws.json before updating tag"

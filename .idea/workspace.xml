@@ -10,8 +10,6 @@
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce" afterDir="false" />
@@ -6097,7 +6095,7 @@
     "Spring Boot.springApp.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "testing",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/redakriate/Desktop/SpringApp",

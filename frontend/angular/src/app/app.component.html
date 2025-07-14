@@ -1,3 +1,8 @@
 <h1>hello friends {{result}}</h1>
+<a routerLink="/page-1">page 1</a> &nbsp; | &nbsp;
+<a routerLink="/page-2">page 2</a> &nbsp; | &nbsp;
+<a (click)="clickRoute()" href="javascript:void(0)">page 3</a>
 <app-first (resultPar)="changeResult($event)" ></app-first>
+<router-outlet></router-outlet>
+
 

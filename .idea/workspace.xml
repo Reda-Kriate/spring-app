@@ -11,9 +11,9 @@
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce" afterDir="false" />
@@ -6340,7 +6340,7 @@
       <workItem from="1751478612595" duration="166000" />
       <workItem from="1751478791293" duration="26811000" />
       <workItem from="1751996404556" duration="10918000" />
-      <workItem from="1752428067864" duration="13417000" />
+      <workItem from="1752428067864" duration="15312000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

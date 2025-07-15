@@ -11,9 +11,32 @@
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/first/first.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/first/first.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/first/first.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/first/first.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-1/page-1.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-1/page-1.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-1/page-1.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-1/page-1.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-2/page-2.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-2/page-2.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-2/page-2.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-2/page-2.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-3/page-3.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-3/page-3.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-3/page-3.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-3/page-3.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/services/my-caluculator.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/services/my-caluculator.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce" afterDir="false" />
@@ -6040,95 +6063,95 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Database Script.V1__Init.sql.executor": "Run",
-    "Database Script.V1__Initial_Setup.sql.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JUnit.CustomerControlTest.canDeleteACustomer.executor": "Run",
-    "JUnit.CustomerControlTest.canRegisterACustomer.executor": "Run",
-    "JUnit.CustomerControlTest.canUpdateACustomer.executor": "Run",
-    "JUnit.CustomerControlTest.executor": "Run",
-    "JUnit.CustomerIntegrationTest.canDeleteACustomer.executor": "Run",
-    "JUnit.CustomerIntegrationTest.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.deleteCustomer.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.executor": "Debug",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.existsCustomerWithEmail.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.existsCustomerWithId.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.insertCustomer.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateCustomerAgeWithId.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateCustomerEmailWithId.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateCustomerName.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateCustomerNameWithId.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateFullCustomerWithId.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.willReturnEmptySelectCustomerById.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.willReturnFalseExistsCustomerWithEmail.executor": "Run",
-    "JUnit.CustomerJdbcTemplateDataAccessServiceTest.willReturnFalseExistsCustomerWithId.executor": "Run",
-    "JUnit.CustomerJpaDataAccessServiceTest.deleteCustomer.executor": "Run",
-    "JUnit.CustomerJpaDataAccessServiceTest.executor": "Run",
-    "JUnit.CustomerJpaDataAccessServiceTest.existsCustomerWithEmail.executor": "Run",
-    "JUnit.CustomerJpaDataAccessServiceTest.insertCustomer.executor": "Run",
-    "JUnit.CustomerJpaDataAccessServiceTest.selectAllCustomers (1).executor": "Run",
-    "JUnit.CustomerJpaDataAccessServiceTest.selectAllCustomers.executor": "Run",
-    "JUnit.CustomerJpaDataAccessServiceTest.selectById.executor": "Run",
-    "JUnit.CustomerJpaDataAccessServiceTest.updateCustomerWithId.executor": "Run",
-    "JUnit.CustomerRepositoryTest.executor": "Run",
-    "JUnit.CustomerRowMapperTest.mapRow.executor": "Run",
-    "JUnit.CustomerServiceTest.addCustomer.executor": "Run",
-    "JUnit.CustomerServiceTest.addCustomerReturnEmailExists.executor": "Run",
-    "JUnit.CustomerServiceTest.deleteCustomer.executor": "Run",
-    "JUnit.CustomerServiceTest.deleteCustomerWhenIdReturnFalse.executor": "Run",
-    "JUnit.CustomerServiceTest.getCustomersById.executor": "Run",
-    "JUnit.CustomerServiceTest.updateByIdNothingChanged.executor": "Run",
-    "JUnit.CustomerServiceTest.updateByIdWhenAgeNotEqualNullAndChanged.executor": "Run",
-    "JUnit.CustomerServiceTest.updateByIdWhenEmailNotEqualNullAndChangedAndEmailExist.executor": "Run",
-    "JUnit.CustomerServiceTest.updateByIdWhenEmailNotEqualNullAndChangedAndEmailNotExist.executor": "Run",
-    "JUnit.CustomerServiceTest.updateByIdWhenNameNotEqualNullAndChanged.executor": "Run",
-    "JUnit.CustomerServiceTest.whenGetCustomersByIdReturnEmptyOptional.executor": "Run",
-    "JUnit.TestContainerTest.canStartPostgresDB.executor": "Debug",
-    "JUnit.TestContainerTest.executor": "Run",
-    "Maven.SpringApp [org.springframework.boot:spring-boot-maven-plugin:3.4.4:start].executor": "Run",
-    "Maven.SpringApp [org.springframework.boot:spring-boot-maven-plugin:3.4.4:stop].executor": "Run",
-    "Maven.SpringApp [package].executor": "Run",
-    "Maven.SpringApp [test].executor": "Run",
-    "Maven.SpringApp [verify].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.Main.executor": "Run",
-    "Spring Boot.SpringAppApplication.executor": "Run",
-    "Spring Boot.springApp.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/redakriate/Desktop/SpringApp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.32873562",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.V1__Init.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.V1__Initial_Setup.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerControlTest.canDeleteACustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerControlTest.canRegisterACustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerControlTest.canUpdateACustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerControlTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerIntegrationTest.canDeleteACustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.deleteCustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.existsCustomerWithEmail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.existsCustomerWithId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.insertCustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateCustomerAgeWithId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateCustomerEmailWithId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateCustomerName.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateCustomerNameWithId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.updateFullCustomerWithId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.willReturnEmptySelectCustomerById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.willReturnFalseExistsCustomerWithEmail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJdbcTemplateDataAccessServiceTest.willReturnFalseExistsCustomerWithId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJpaDataAccessServiceTest.deleteCustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJpaDataAccessServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJpaDataAccessServiceTest.existsCustomerWithEmail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJpaDataAccessServiceTest.insertCustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJpaDataAccessServiceTest.selectAllCustomers (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJpaDataAccessServiceTest.selectAllCustomers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJpaDataAccessServiceTest.selectById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerJpaDataAccessServiceTest.updateCustomerWithId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerRowMapperTest.mapRow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.addCustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.addCustomerReturnEmailExists.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.deleteCustomer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.deleteCustomerWhenIdReturnFalse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.getCustomersById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.updateByIdNothingChanged.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.updateByIdWhenAgeNotEqualNullAndChanged.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.updateByIdWhenEmailNotEqualNullAndChangedAndEmailExist.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.updateByIdWhenEmailNotEqualNullAndChangedAndEmailNotExist.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.updateByIdWhenNameNotEqualNullAndChanged.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomerServiceTest.whenGetCustomersByIdReturnEmptyOptional.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestContainerTest.canStartPostgresDB.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.TestContainerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.SpringApp [org.springframework.boot:spring-boot-maven-plugin:3.4.4:start].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.SpringApp [org.springframework.boot:spring-boot-maven-plugin:3.4.4:stop].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.SpringApp [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.SpringApp [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.SpringApp [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SpringAppApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.springApp.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/redakriate/Desktop/SpringApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32873562&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "d2699e0f-3a31-421e-9eb3-a97f89b18418"
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;d2699e0f-3a31-421e-9eb3-a97f89b18418&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />

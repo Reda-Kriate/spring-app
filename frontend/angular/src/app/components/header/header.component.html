@@ -1,0 +1,30 @@
+<div class="flex flex-column align-items-end border-bottom-1 border-gray-200 pt-3 pb-3">
+  <div class="flex flex-row align-items-center">
+    <button pButton
+            pRipple
+            type="button"
+            icon="pi pi-bell"
+            class="p-button-rounded p-button-secondary p-button-text mr-3"
+    ></button>
+    <p-avatar
+      image="https://media1.thehungryjpeg.com/thumbs2/ori_3807375_z4mbmnkdbsxt1qwv8opko80x6rkbg5bltmegjl69_monogram-rk-logo-design.jpg"
+      class="mr-2 border-2 border-gray-500"
+      size="normal"
+      shape="circle"/>
+    <div>
+      <p class="text-base mb-0 mt-1 text-gray-700">redakriate&#64;gmail.com</p>
+      <p class="text-sm mb-1 mt-0 text-gray-500">ROLE_ADMIN</p>
+    </div>
+    <div>
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-angle-down"
+        class="p-button-text p-button-secondary"
+        (click)="menu.toggle($event)"
+      ></button>
+      <p-menu #menu [model]="items" [popup]="true" />
+    </div>
+  </div>
+</div>

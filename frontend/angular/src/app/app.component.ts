@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import {Router, RouterLink, RouterOutlet} from '@angular/router';
+import {RouterOutlet} from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,4 +9,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  title = 'angular';
 }

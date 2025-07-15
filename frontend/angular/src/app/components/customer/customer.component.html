@@ -1,13 +1,30 @@
+
+
+
+
+
+
+<p-drawer
+          [(visible)]="visible2"
+          position="right"
+          styleClass="w-8 md:w-80 lg:w-[30rem]">
+</p-drawer>
 <div class="flex align-items-stretch" style="height: 99vh;">
   <div class="flex flex-column align-items-stretch border-right-1 col-2 border-gray-200">
-    app-menu
+    <app-menu-bar></app-menu-bar>
   </div>
   <div class="flex flex-column flex-grow-1 ">
       <div>
-        header
+        <app-header></app-header>
       </div>
+
       <div class="main-container p-3">
-        button
+        <button
+          pButton
+          pRipple
+          icon="pi pi-plus"
+          (click)="visible2 = true"
+          > Create customer</button>
         <div>
           customer cards ...
         </div>

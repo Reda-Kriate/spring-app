@@ -5,38 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed31411a-abea-4acc-82c8-20e752276997" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/reda/Main.java&#10;#&#9;src/main/java/com/reda/customer/CustomerJdbcTemplateDataAccessService.java">
+      <change afterPath="$PROJECT_DIR$/frontend/angular/public/logo-reda.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APP2/src/main/java/com/tp/APP1/controllers/AdminAchatValidationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../APP2/src/main/java/com/tp/APP1/controllers/AdminAchatValidationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APP2/src/main/java/com/tp/APP1/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../APP2/src/main/java/com/tp/APP1/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/first/first.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/first/first.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/first/first.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/first/first.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-1/page-1.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-1/page-1.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-1/page-1.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-1/page-1.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-2/page-2.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-2/page-2.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-2/page-2.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-2/page-2.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-3/page-3.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-3/page-3.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-3/page-3.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/pages/page-3/page-3.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/services/my-caluculator.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/services/my-caluculator.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce" afterDir="false" />

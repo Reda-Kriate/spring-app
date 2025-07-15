@@ -1,0 +1,16 @@
+div{
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  &:hover{
+    background-color: cadetblue;
+    color: #fff;
+    cursor: pointer;
+  }
+  &:active{
+    background-color: #436868;
+  }
+  i{
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,13 @@
+<h4 class="text-center mt-0">Dashboard</h4>
+<div class="text-center pb-3">
+  <p-avatar
+    image="https://media1.thehungryjpeg.com/thumbs2/ori_3807375_z4mbmnkdbsxt1qwv8opko80x6rkbg5bltmegjl69_monogram-rk-logo-design.jpg"
+    class="mr-2 border-2 border-gray-500"
+    size="xlarge"
+    shape="circle"/>
+</div>
+<div>
+  <app-menu-item *ngFor="let item of menuItem" [MenuitemCom] = "item">{{item}}</app-menu-item>
+</div>
+
+

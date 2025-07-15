@@ -13,5 +13,5 @@ export const appConfig: ApplicationConfig = {
       theme: {
         preset: Lara
       }
-    })]
+    })],
 };

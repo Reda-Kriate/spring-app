@@ -4,6 +4,7 @@ import {HeaderComponent} from '../header/header.component';
 import {ButtonDirective} from 'primeng/button';
 import {Ripple} from 'primeng/ripple';
 import {Drawer} from 'primeng/drawer';
+import {ManagementCustomerComponent} from '../management-customer/management-customer.component';
 
 @Component({
   selector: 'app-customer',
@@ -12,7 +13,8 @@ import {Drawer} from 'primeng/drawer';
     HeaderComponent,
     ButtonDirective,
     Ripple,
-    Drawer
+    Drawer,
+    ManagementCustomerComponent
   ],
   templateUrl: './customer.component.html',
   styleUrl: './customer.component.scss'

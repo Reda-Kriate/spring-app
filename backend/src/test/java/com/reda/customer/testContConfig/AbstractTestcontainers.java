@@ -20,6 +20,7 @@ public class AbstractTestcontainers {
 
     @BeforeAll
     static void beforeAll() {
+
         postgresqlcontainer.start();
 
         if(!postgresqlcontainer.isRunning()){
@@ -29,7 +30,10 @@ public class AbstractTestcontainers {
             Flyway flyway = Flyway.configure().dataSource(
                     postgresqlcontainer.getJdbcUrl(),
                     postgresqlcontainer.getUsername(),
-                    postgresqlcontainer.getPassword()).load();
+                    postgresqlcontainer.getPassword())
+                    .cleanDisabled(false)
+                    .load();
+            flyway.clean();
             flyway.migrate();
             System.out.println();
     }
@@ -40,8 +44,9 @@ public class AbstractTestcontainers {
             new PostgreSQLContainer<>("postgres:latest")
                     .withDatabaseName("reda-dao-unit-test")
                     .withUsername("redakriate")
-                    .withPassword("password");
+                    .withPassword("redareda");
 
+    @DynamicPropertySource
     private static void registerDatasourceProperties(DynamicPropertyRegistry registry){
         registry.add(
                 "spring.datasource.url",

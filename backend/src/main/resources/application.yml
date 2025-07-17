@@ -2,6 +2,9 @@ server:
   port: 8081
   error:
     include-message: always
+cors:
+  allowed-methods: "*"
+  allowed-origins: "*"
 spring:
   main:
     web-application-type: servlet

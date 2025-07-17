@@ -30,19 +30,25 @@ public class Customer{
     @Column(nullable = false,unique = true)
     private String email;
 
+    @Column(nullable = false)
+    private String gender;
+
     public Customer(){}
 
-    public Customer(int id, String name, int age, String email) {
+    public Customer(int id, String name, int age, String email , String gender) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.email = email;
+        this.gender = gender;
     }
-    public Customer( String name, int age, String email) {
+    public Customer( String name, int age, String email, String gender) {
         this.name = name;
         this.age = age;
         this.email = email;
+        this.gender = gender;
     }
+
 
     public Integer getId() {
         return id;
@@ -75,19 +81,24 @@ public class Customer{
     public void setEmail(String email) {
         this.email = email;
     }
+    public String getGender() {
+        return gender;
+    }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return id == customer.id && age == customer.age && Objects.equals(name, customer.name) && Objects.equals(email, customer.email);
+        return Objects.equals(id, customer.id) && Objects.equals(name, customer.name) && Objects.equals(age, customer.age) && Objects.equals(email, customer.email) && Objects.equals(gender, customer.gender);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, age, email);
+        return Objects.hash(id, name, age, email, gender);
     }
-
 
     @Override
     public String toString() {
@@ -96,6 +107,7 @@ public class Customer{
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }

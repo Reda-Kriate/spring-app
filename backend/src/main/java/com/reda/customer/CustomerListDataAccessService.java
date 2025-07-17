@@ -11,9 +11,9 @@ public class CustomerListDataAccessService implements DaoCustomerInt{
         private static final List<Customer> customers;
         static {
         customers = new ArrayList<Customer>();
-        Customer reda = new Customer(1,"Reda",22,"reda@gmail.com");
+        Customer reda = new Customer(1,"Reda",22,"reda@gmail.com","men");
         customers.add(reda);
-        Customer abdo = new Customer(2,"Abdo",23,"abdo@gmail.com");
+        Customer abdo = new Customer(2,"Abdo",23,"abdo@gmail.com", "female");
         customers.add(abdo);
         }
 

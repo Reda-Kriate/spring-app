@@ -46,7 +46,8 @@ class CustomerServiceTest {
         Customer customer = new Customer(
                 "com/reda/customer/testContConfig",
                 22,
-                "reda@test-Mockito"
+                "reda@test-Mockito",
+                "male"
         );
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(customer));
         //WHEN
@@ -74,7 +75,7 @@ class CustomerServiceTest {
         String email = "reda@test.com";
         when(daoCustomerInt.existsCustomerWithEmail(email)).thenReturn(false);
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "com/reda/customer/testContConfig",21,email
+                "com/reda/customer/testContConfig",21,email,"female"
         );
         //WHEN
         //ajouter customer
@@ -95,6 +96,7 @@ class CustomerServiceTest {
         assertThat (customerCaptured.getName()).isEqualTo(request.name());
         assertThat (customerCaptured.getEmail()).isEqualTo(request.email());
         assertThat(customerCaptured.getAge()).isEqualTo(request.age());
+        assertThat(customerCaptured.getGender()).isEqualTo(request.gender());
     }
 
     @Test
@@ -103,7 +105,7 @@ class CustomerServiceTest {
         String email = "reda@mockito";
         when(daoCustomerInt.existsCustomerWithEmail(email)).thenReturn(true);
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "com/reda/customer/testContConfig",22,email
+                "com/reda/customer/testContConfig",22,email,"male"
         );
         //WHEN
         assertThatThrownBy(()-> underTest.addCustomer(request))
@@ -139,9 +141,9 @@ class CustomerServiceTest {
         //GIVEN
         int id = 1;
         Customer existingCustomer = new Customer(
-                id, "com/reda/customer/testContConfig",50,"test");
+                id, "com/reda/customer/testContConfig",50,"test","male");
         CustomerUpdateRegistration update = new CustomerUpdateRegistration(
-                "abdo", 50, "test");
+                "abdo", 50, "test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
 
@@ -155,6 +157,7 @@ class CustomerServiceTest {
         assertThat(customerCapt.getName()).isEqualTo(update.name());
         assertThat(customerCapt.getAge()).isEqualTo(update.age());
         assertThat(customerCapt.getEmail()).isEqualTo(update.email());
+        assertThat(customerCapt.getGender()).isEqualTo(update.gender());
 
     }
 
@@ -162,8 +165,8 @@ class CustomerServiceTest {
     void updateByIdWhenAgeNotEqualNullAndChanged() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 22, "test");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test","male");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 22, "test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
         ArgumentCaptor<Customer> argumentCaptor = ArgumentCaptor.forClass(Customer.class);
@@ -175,14 +178,38 @@ class CustomerServiceTest {
         assertThat(customerCapt.getName()).isEqualTo(update.name());
         assertThat(customerCapt.getAge()).isEqualTo(update.age());
         assertThat(customerCapt.getEmail()).isEqualTo(update.email());
+        assertThat(customerCapt.getGender()).isEqualTo(update.gender());
+    }
+    @Test
+    void updateByIdWhenGenderNotEqualNullAndChanged() {
+        //GIVEN
+        int id = 1;
+        Customer existingCustomer = new Customer(
+                id, "abdo",50,"test","male");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration(
+                "abdo", 50, "test","female");
+        //WHEN
+        when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
+
+
+        ArgumentCaptor<Customer> argumentCaptor = ArgumentCaptor.forClass(Customer.class);
+
+        underTest.updateById(id,update);
+        //THEN
+        verify(daoCustomerInt).updateCustomerWithId(argumentCaptor.capture());
+        Customer customerCapt = argumentCaptor.getValue();
+        assertThat(customerCapt.getName()).isEqualTo(update.name());
+        assertThat(customerCapt.getAge()).isEqualTo(update.age());
+        assertThat(customerCapt.getEmail()).isEqualTo(update.email());
+        assertThat(customerCapt.getGender()).isEqualTo(update.gender());
 
     }
     @Test
     void updateByIdWhenEmailNotEqualNullAndChangedAndEmailNotExist() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test@test");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test","male");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test@test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
         when(daoCustomerInt.existsCustomerWithEmail("test@test")).thenReturn(false);
@@ -195,13 +222,14 @@ class CustomerServiceTest {
         assertThat(customerCapt.getName()).isEqualTo(update.name());
         assertThat(customerCapt.getAge()).isEqualTo(update.age());
         assertThat(customerCapt.getEmail()).isEqualTo(update.email());
+        assertThat(customerCapt.getGender()).isEqualTo(update.gender());
     }
     @Test
     void updateByIdWhenEmailNotEqualNullAndChangedAndEmailExist() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test@test");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test","male");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test@test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
         when(daoCustomerInt.existsCustomerWithEmail("test@test")).thenReturn(true);
@@ -216,8 +244,8 @@ class CustomerServiceTest {
     void updateByIdNothingChanged() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test");
-        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test","male");
+        CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
 

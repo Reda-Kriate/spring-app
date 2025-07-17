@@ -23,7 +23,6 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 public class CustomerIntegrationTest {
     @Autowired
     private WebTestClient webTestClient;
-
     @Test
     void canRegisterACustomer(){
         Faker faker = new Faker();
@@ -31,9 +30,10 @@ public class CustomerIntegrationTest {
         String name = faker.name().fullName();
         int age = random.nextInt(1,60);
         String email = name +"-"+ UUID.randomUUID()+"@gmailTest.com";
+        String gender = "male";
         //create registration request
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name,age,email
+                name,age,email,gender
         );
         //send a post request
         webTestClient.post()
@@ -56,7 +56,7 @@ public class CustomerIntegrationTest {
                 .getResponseBody();
         //make sure that customer present
         Customer expect = new Customer(
-                name,age,email
+                name,age,email,gender
         );
         assertThat(allCustomers)
                 .usingRecursiveFieldByFieldElementComparatorIgnoringFields("id")
@@ -85,9 +85,10 @@ public class CustomerIntegrationTest {
         String name = faker.name().fullName();
         int age = random.nextInt(1,60);
         String email = name +"-"+ UUID.randomUUID()+"@gmailTest.com";
+        String gender = "male";
         //create registration request
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name,age,email
+                name,age,email,gender
         );
         //send a post request
         webTestClient.post()
@@ -138,9 +139,10 @@ public class CustomerIntegrationTest {
         String name = faker.name().fullName();
         int age = random.nextInt(1,60);
         String email = name +"-"+ UUID.randomUUID()+"@gmailTest.com";
+        String gender = "male";
         //create registration request
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name,age,email
+                name,age,email,gender
         );
         //send a post request
         webTestClient.post()
@@ -170,7 +172,7 @@ public class CustomerIntegrationTest {
                 .orElseThrow();
         String newName = "newReda";
         CustomerUpdateRegistration update = new CustomerUpdateRegistration(
-                newName , null , null
+                newName , null , null,null
         );
 
         webTestClient.put()
@@ -192,7 +194,7 @@ public class CustomerIntegrationTest {
                 .returnResult()
                 .getResponseBody();
         Customer expected = new Customer(
-                id,newName,age,email
+                id,newName,age,email,gender
         );
         assertThat(updaterCust).isEqualTo(expected);
     }

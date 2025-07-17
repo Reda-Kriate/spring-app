@@ -36,7 +36,8 @@ class CustomerRepositoryTest extends AbstractTestcontainers {
         Customer customer = new Customer(
                 FAKER.name().fullName(),
                 20,
-                email
+                email,
+                "male"
         );
         underTest.save(customer);
         //WHEN
@@ -62,7 +63,8 @@ class CustomerRepositoryTest extends AbstractTestcontainers {
         Customer customer = new Customer(
                 FAKER.name().fullName(),
                 20,
-                email
+                email,
+                "female"
         );
         underTest.save(customer);
         //WHEN

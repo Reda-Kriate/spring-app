@@ -19,7 +19,7 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
     @Override
     public List<Customer> selectAllCustomers() {
         var sql = """
-                SELECT id, name, age, email
+                SELECT id, name, age, email, gender
                 FROM customer
                 """;
 
@@ -29,7 +29,7 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
     @Override
     public Optional<Customer> selectById(Integer id) {
         var sql = """
-                SELECT id, name, age, email
+                SELECT id, name, age, email, gender
                 FROM customer
                 WHERE id = ?
                 """;
@@ -40,13 +40,14 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
     @Override
     public void insertCustomer(Customer customer) {
         var sql = """
-                INSERT INTO customer(name, age, email)
-                VALUES(?, ?, ?)
+                INSERT INTO customer(name, age, email, gender)
+                VALUES(?, ?, ?, ?)
                 """;
         jdbcTemplate.update( sql,
                 customer.getName(),
                 customer.getAge(),
-                customer.getEmail() );
+                customer.getEmail(),
+                customer.getGender());
     }
 
     @Override
@@ -104,6 +105,11 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
                     """;
             jdbcTemplate.update(sql,customer.getEmail(),customer.getId());
         }
-
+        if(customer.getGender() != null){
+            var sql = """
+                    UPDATE customer SET gender = ? WHERE id = ?
+                    """;
+            jdbcTemplate.update(sql,customer.getGender(),customer.getId());
+        }
     }
 }

@@ -6090,6 +6090,7 @@
     "JUnit.TestContainerTest.canStartPostgresDB.executor": "Debug",
     "JUnit.TestContainerTest.executor": "Run",
     "JUnit.customer in spring-app.executor": "Run",
+    "JUnit.journeyControler in spring-app.executor": "Run",
     "JUnit.testContConfig in spring-app.executor": "Run",
     "Maven.SpringApp [org.springframework.boot:spring-boot-maven-plugin:3.4.4:start].executor": "Run",
     "Maven.SpringApp [org.springframework.boot:spring-boot-maven-plugin:3.4.4:stop].executor": "Run",
@@ -6185,22 +6186,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRepositoryTest.existsByEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.reda.customer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.reda.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.reda.customer.CustomerRepositoryTest" />
-      <option name="METHOD_NAME" value="existsByEmail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CustomerRowMapperTest.mapRow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-app" />
       <extension name="coverage">
@@ -6225,6 +6210,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="journeyControler in spring-app" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-app" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/backend/src/test/java/com/reda/journeyControler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="springApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-app" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.reda.Main" />
@@ -6241,19 +6234,19 @@
     <list>
       <item itemvalue="Database Script.V1__Initial_Setup.sql" />
       <item itemvalue="JUnit.CustomerRepositoryTest" />
-      <item itemvalue="JUnit.CustomerRepositoryTest.existsByEmail" />
       <item itemvalue="JUnit.CustomerRowMapperTest.mapRow" />
       <item itemvalue="JUnit.customer in spring-app" />
+      <item itemvalue="JUnit.journeyControler in spring-app" />
       <item itemvalue="JUnit.CustomerIntegrationTest" />
       <item itemvalue="Spring Boot.springApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.journeyControler in spring-app" />
+        <item itemvalue="JUnit.customer in spring-app" />
         <item itemvalue="JUnit.CustomerIntegrationTest" />
         <item itemvalue="JUnit.CustomerRowMapperTest.mapRow" />
-        <item itemvalue="JUnit.customer in spring-app" />
         <item itemvalue="JUnit.CustomerRepositoryTest" />
-        <item itemvalue="JUnit.CustomerRepositoryTest.existsByEmail" />
       </list>
     </recent_temporary>
   </component>

@@ -1,0 +1,53 @@
+<div class="flex" style="height: 100vh">
+  <div class="flex flex-column col-6 justify-content-center m-3  ">
+    <div class="m-auto">
+      <div class="text-center">
+        <p-avatar
+          image="https://media1.thehungryjpeg.com/thumbs2/ori_3807375_z4mbmnkdbsxt1qwv8opko80x6rkbg5bltmegjl69_monogram-rk-logo-design.jpg"
+          class="mr-2 border-2 border-gray-500"
+          size="xlarge"
+          shape="circle"/>
+        <h2>Sign it to your account</h2>
+      </div>
+
+      <div class="field">
+        <label
+          for="username"
+        >Username</label>
+        <input
+        id="username"
+        pInputText
+        type="text"
+        class="w-full">
+      </div>
+
+      <div class="field">
+        <label
+          for="password"
+        >Password</label>
+        <input
+        id="password"
+        pInputText
+        type="password"
+        class="w-full">
+      </div>
+      <button pButton
+              label="Login"
+              class="w-full"></button>
+      <button pButton
+              label="Don't have an account? Sign in now"
+              class="w-full p-button-link pl-0 text-left"
+              [style.justify-content]="'flex-start'"
+      ></button>
+    </div>
+  </div>
+
+  <div class="col-6 flex flex-column justify-content-center align-items-center right-container">
+    <h1>
+      <a href="#" target="_blank">Enroll Now</a>
+    </h1>
+    <img
+      class="background p-6 pt-0"
+      src="https://user-images.githubusercontent.com/40702606/215539167-d7006790-b880-4929-83fb-c43fa74f429e.png">
+  </div>
+</div>

@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "reda-spring-app-api",
-      "image": "redakriate/spring-app:17.07.2025.21.41.29",
+      "image": "redakriate/spring-app:latest",
       "essential": true,
       "memory": 512,
       "portMappings": [

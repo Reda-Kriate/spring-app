@@ -47,6 +47,7 @@ class CustomerServiceTest {
                 "com/reda/customer/testContConfig",
                 22,
                 "reda@test-Mockito",
+                "password",
                 "male"
         );
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(customer));
@@ -141,7 +142,7 @@ class CustomerServiceTest {
         //GIVEN
         int id = 1;
         Customer existingCustomer = new Customer(
-                id, "com/reda/customer/testContConfig",50,"test","male");
+                id, "com/reda/customer/testContConfig",50,"test", "password", "male");
         CustomerUpdateRegistration update = new CustomerUpdateRegistration(
                 "abdo", 50, "test","male");
         //WHEN
@@ -165,7 +166,7 @@ class CustomerServiceTest {
     void updateByIdWhenAgeNotEqualNullAndChanged() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test","male");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test", "password", "male");
         CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 22, "test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
@@ -185,7 +186,7 @@ class CustomerServiceTest {
         //GIVEN
         int id = 1;
         Customer existingCustomer = new Customer(
-                id, "abdo",50,"test","male");
+                id, "abdo",50,"test", "password", "male");
         CustomerUpdateRegistration update = new CustomerUpdateRegistration(
                 "abdo", 50, "test","female");
         //WHEN
@@ -208,7 +209,7 @@ class CustomerServiceTest {
     void updateByIdWhenEmailNotEqualNullAndChangedAndEmailNotExist() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test","male");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test", "password", "male");
         CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test@test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
@@ -228,7 +229,7 @@ class CustomerServiceTest {
     void updateByIdWhenEmailNotEqualNullAndChangedAndEmailExist() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test","male");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test", "password", "male");
         CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test@test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));
@@ -244,7 +245,7 @@ class CustomerServiceTest {
     void updateByIdNothingChanged() {
         //GIVEN
         int id = 1;
-        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test","male");
+        Customer existingCustomer = new Customer(id, "com/reda/customer/testContConfig",50,"test", "password", "male");
         CustomerUpdateRegistration update = new CustomerUpdateRegistration("com/reda/customer/testContConfig", 50, "test","male");
         //WHEN
         when(daoCustomerInt.selectById(id)).thenReturn(Optional.of(existingCustomer));

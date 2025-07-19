@@ -11,9 +11,9 @@ public class CustomerListDataAccessService implements DaoCustomerInt{
         private static final List<Customer> customers;
         static {
         customers = new ArrayList<Customer>();
-        Customer reda = new Customer(1,"Reda",22,"reda@gmail.com","men");
+        Customer reda = new Customer(1,"Reda",22,"reda@gmail.com", "password", "men");
         customers.add(reda);
-        Customer abdo = new Customer(2,"Abdo",23,"abdo@gmail.com", "female");
+        Customer abdo = new Customer(2,"Abdo",23,"abdo@gmail.com", "password", "female");
         customers.add(abdo);
         }
 
@@ -58,5 +58,12 @@ public class CustomerListDataAccessService implements DaoCustomerInt{
     @Override
     public void updateCustomerWithId(Customer update) {
          customers.add(update);
+    }
+
+    @Override
+    public Optional<Customer> selectUserByEmail(String email) {
+        return customers.stream()
+                .filter( cus -> cus.getUsername().equals(email))
+                .findFirst();
     }
 }

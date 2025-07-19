@@ -28,6 +28,7 @@ class CustomerRowMapperTest{
                 "reda",
                 22,
                 "reda@test",
+                "password",
                 "male");
         //THEN
         assertThat(actual.getId()).isEqualTo(expected.getId());

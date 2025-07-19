@@ -1,5 +1,8 @@
 package com.reda.customer;
 
+import com.reda.JWT.JWTUtil;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -8,9 +11,11 @@ import java.util.List;
 @RequestMapping("/api/v1/customer")
 public class CustomerControl {
     private final CustomerService customerSrv;
+    private final JWTUtil jwtUtil;
 
-    public CustomerControl(CustomerService customerSrv) {
+    public CustomerControl(CustomerService customerSrv, JWTUtil jwtUtil) {
         this.customerSrv = customerSrv;
+        this.jwtUtil = jwtUtil;
     }
 
     @GetMapping
@@ -24,8 +29,10 @@ public class CustomerControl {
     }
 
     @PostMapping
-    public void registerCustomer( @RequestBody CustomerRegistrationRequest request){
+    public ResponseEntity<?> registerCustomer(@RequestBody CustomerRegistrationRequest request){
         customerSrv.addCustomer(request);
+        String jwtToken = jwtUtil.issueToken(request.email(),"ROLE_USER");
+        return ResponseEntity.ok().header(HttpHeaders.AUTHORIZATION,jwtToken).build();
     }
 
     @DeleteMapping("{id}")

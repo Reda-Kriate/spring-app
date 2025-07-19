@@ -29,6 +29,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 20,
                 FAKER.internet().safeEmailAddress()+"-"+ UUID.randomUUID(),
+                "password",
                 "male"
         );
         underTest.insertCustomer(customer);
@@ -47,6 +48,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 20,
                 email,
+                "password",
                 "female"
         );
         underTest.insertCustomer(customer);
@@ -82,6 +84,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 name,
                 21,
                 FAKER.internet().safeEmailAddress()+"-"+ UUID.randomUUID(),
+                "password",
                 "male"
         );
         //WHEN
@@ -108,6 +111,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 22,
                 email,
+                "password",
                 "female"
         );
         underTest.insertCustomer(customer);
@@ -125,6 +129,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 22,
                 email,
+                "password",
                 "male"
         );
         underTest.insertCustomer(customer);
@@ -142,6 +147,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 22,
                 email,
+                "password",
                 "male"
         );
         underTest.insertCustomer(customer);
@@ -163,6 +169,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 22,
                 email,
+                "password",
                 "female"
         );
         underTest.insertCustomer(customer);
@@ -180,6 +187,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 22,
                 email,
+                "password",
                 "female"
         );
         underTest.insertCustomer(customer);
@@ -200,6 +208,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 21,
                 email,
+                "password",
                 "male"
         );
         //WHEN
@@ -233,6 +242,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 21,
                 email,
+                "password",
                 "male"
         );
         //WHEN
@@ -266,6 +276,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 21,
                 email,
+                "password",
                 "male"
         );
         //WHEN
@@ -299,6 +310,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 21,
                 email,
+                "password",
                 "female"
         );
         //WHEN
@@ -331,6 +343,7 @@ class CustomerJdbcTemplateDataAccessServiceTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 21,
                 email,
+                "password",
                 "male"
         );
         //WHEN

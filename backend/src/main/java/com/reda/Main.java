@@ -26,7 +26,7 @@ public class Main {
 
             Customer customer = new Customer(FirstName+" "+LastName,
                                             random.nextInt(17,70),
-                            FirstName+"."+LastName+"@hbib.com","Male");
+                            FirstName+"."+LastName+"@hbib.com", "password", "Male");
             customerRepository.save(customer);
         };
     }

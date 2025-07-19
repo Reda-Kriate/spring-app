@@ -47,4 +47,9 @@ public class CustomerJpaDataAccessService implements DaoCustomerInt{
     public void updateCustomerWithId(Customer update) {
          customerRepository.save(update);
     }
+
+    @Override
+    public Optional<Customer> selectUserByEmail(String email) {
+        return customerRepository.findCustomerByEmail(email);
+    }
 }

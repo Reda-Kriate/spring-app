@@ -1,1 +1,0 @@
-ALTER TABLE customer ADD COLUMN gender text NOT NULL DEFAULT 'Male';

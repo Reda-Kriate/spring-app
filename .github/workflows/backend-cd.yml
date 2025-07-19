@@ -6,7 +6,7 @@ on:
     paths:
       - backend/**
     branches:
-      - main
+      - testing
 permissions:
   contents: write
 

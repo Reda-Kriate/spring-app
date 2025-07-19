@@ -37,6 +37,7 @@ class CustomerRepositoryTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 20,
                 email,
+                "password",
                 "male"
         );
         underTest.save(customer);
@@ -64,6 +65,7 @@ class CustomerRepositoryTest extends AbstractTestcontainers {
                 FAKER.name().fullName(),
                 20,
                 email,
+                "password",
                 "female"
         );
         underTest.save(customer);

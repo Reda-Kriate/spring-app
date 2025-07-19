@@ -19,7 +19,7 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
     @Override
     public List<Customer> selectAllCustomers() {
         var sql = """
-                SELECT id, name, age, email, gender
+                SELECT id, name, age, email,password, gender
                 FROM customer
                 """;
 
@@ -29,7 +29,7 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
     @Override
     public Optional<Customer> selectById(Integer id) {
         var sql = """
-                SELECT id, name, age, email, gender
+                SELECT id, name, age, email,password, gender
                 FROM customer
                 WHERE id = ?
                 """;
@@ -40,13 +40,14 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
     @Override
     public void insertCustomer(Customer customer) {
         var sql = """
-                INSERT INTO customer(name, age, email, gender)
-                VALUES(?, ?, ?, ?)
+                INSERT INTO customer(name, age, email,password, gender)
+                VALUES(?, ?, ?, ?, ?)
                 """;
         jdbcTemplate.update( sql,
                 customer.getName(),
                 customer.getAge(),
                 customer.getEmail(),
+                customer.getPassword(),
                 customer.getGender());
     }
 
@@ -111,5 +112,16 @@ public class CustomerJdbcTemplateDataAccessService implements DaoCustomerInt{
                     """;
             jdbcTemplate.update(sql,customer.getGender(),customer.getId());
         }
+    }
+
+    @Override
+    public Optional<Customer> selectUserByEmail(String email) {
+        var sql = """
+                SELECT id, name, age, email,password, gender
+                FROM customer
+                WHERE email = ?
+                """;
+
+        return jdbcTemplate.query(sql, customerRowMapper,email).stream().findFirst();
     }
 }

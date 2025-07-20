@@ -20,12 +20,12 @@ class CustomerRepositoryTest extends AbstractTestcontainers {
     @Autowired
     private CustomerRepository underTest;
 
-    @Autowired
+//    @Autowired
     private ApplicationContext applicationContext;
 
     @BeforeEach
     void setUp() {
-//        underTest.deleteAll();
+        underTest.deleteAll();
         System.out.println("bean count : " + applicationContext.getBeanDefinitionCount());
     }
 

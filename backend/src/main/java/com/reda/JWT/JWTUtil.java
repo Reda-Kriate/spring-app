@@ -1,10 +1,12 @@
 package com.reda.JWT;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -38,7 +40,19 @@ public class JWTUtil {
                 .compact();
         return token;
     }
+    public String getSubject(String token){
+        return getClaims(token).getSubject();
+    }
+    public Claims getClaims(String token){
+        Claims claims = Jwts
+                .parser()
+                .setSigningKey(getSigningKey())
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+        return claims;
+    }
     private Key getSigningKey(){
-        return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
+        return Keys.hmacShaKeyFor(SECRET_KEY.getBytes(StandardCharsets.UTF_8));
     }
 }

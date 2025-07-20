@@ -9,6 +9,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Optional;
 
@@ -22,11 +23,14 @@ class CustomerServiceTest {
 
     @Mock
     private DaoCustomerInt daoCustomerInt;
+    @Mock
+    private PasswordEncoder passwordEncoder;
     private CustomerService underTest;
+
 
     @BeforeEach
     void setUp() {
-        underTest = new CustomerService(daoCustomerInt);
+        underTest = new CustomerService(daoCustomerInt , passwordEncoder);
     }
 
 
@@ -76,9 +80,13 @@ class CustomerServiceTest {
         String email = "reda@test.com";
         when(daoCustomerInt.existsCustomerWithEmail(email)).thenReturn(false);
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "com/reda/customer/testContConfig",21,email,"female"
+                "reda",21,email, "password", "female"
         );
         //WHEN
+
+        //encoder password
+        String passwordHash = "hjabjhbahh1627t36812.<m,.n";
+        when(passwordEncoder.encode(request.password())).thenReturn(passwordHash);
         //ajouter customer
         underTest.addCustomer(request);
         //THEN
@@ -93,10 +101,11 @@ class CustomerServiceTest {
         Customer customerCaptured = customerArgumentCaptor.getValue();
         //Verifier si l'id et null parceque il est auto gen et assurer que les donnees inserer
         //sont les memes donnes Request
-        assertThat (customerCaptured.getId()).isNull();
-        assertThat (customerCaptured.getName()).isEqualTo(request.name());
-        assertThat (customerCaptured.getEmail()).isEqualTo(request.email());
+        assertThat(customerCaptured.getId()).isNull();
+        assertThat(customerCaptured.getName()).isEqualTo(request.name());
+        assertThat(customerCaptured.getEmail()).isEqualTo(request.email());
         assertThat(customerCaptured.getAge()).isEqualTo(request.age());
+        assertThat(customerCaptured.getPassword()).isEqualTo(passwordHash);
         assertThat(customerCaptured.getGender()).isEqualTo(request.gender());
     }
 
@@ -106,7 +115,7 @@ class CustomerServiceTest {
         String email = "reda@mockito";
         when(daoCustomerInt.existsCustomerWithEmail(email)).thenReturn(true);
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "com/reda/customer/testContConfig",22,email,"male"
+                "com/reda/customer/testContConfig",22,email, "password", "male"
         );
         //WHEN
         assertThatThrownBy(()-> underTest.addCustomer(request))

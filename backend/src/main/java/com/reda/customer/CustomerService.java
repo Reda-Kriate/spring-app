@@ -4,6 +4,7 @@ import com.reda.exception.DuplicateResourceException;
 import com.reda.exception.NotFoundException;
 import com.reda.exception.RequestValidationException;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,10 +13,12 @@ import java.util.List;
 public class CustomerService {
 
     private final DaoCustomerInt daoCustomerInt;
+    private final PasswordEncoder passwordEncoder;
 
     public final String variable = "jdbc";
-    public CustomerService(@Qualifier(variable) DaoCustomerInt daoCustomerInt) {
+    public CustomerService(@Qualifier(variable) DaoCustomerInt daoCustomerInt , PasswordEncoder passwordEncoder) {
         this.daoCustomerInt = daoCustomerInt;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public List<Customer> getAllCustomers(){
@@ -34,11 +37,11 @@ public class CustomerService {
         }
         //add customer
         Customer customer = new Customer( customerRegistrationRequest.name(),
-                                        customerRegistrationRequest.age(),
+                                    customerRegistrationRequest.age(),
                                     customerRegistrationRequest.email(),
-                "password", customerRegistrationRequest.gender());
+                                    passwordEncoder.encode(customerRegistrationRequest.password()),
+                                    customerRegistrationRequest.gender());
         daoCustomerInt.insertCustomer(customer);
-
     }
 
     public void deleteCustomer(Integer id){

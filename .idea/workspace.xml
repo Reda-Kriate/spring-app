@@ -10,27 +10,11 @@
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-cd.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/config/webMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/config/webMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerJdbcTemplateDataAccessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerJdbcTemplateDataAccessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerJpaDataAccessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerJpaDataAccessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerListDataAccessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerListDataAccessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerRegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerRegistrationRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/DaoCustomerInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/DaoCustomerInt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V1__Init_Setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V1__Init_Setup.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V2__Add_Constraint.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V3__Add_Default_Gender.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerJdbcTemplateDataAccessServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerJdbcTemplateDataAccessServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerRowMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerRowMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/reda/journeyControler/CustomerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/reda/journeyControler/CustomerIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
@@ -6171,7 +6155,7 @@
       <recent name="com.reda.customer" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.journeyControler in spring-app">
+  <component name="RunManager" selected="Spring Boot.springApp">
     <configuration name="V1__Initial_Setup.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/db/migration/V1__Initial_Setup.sql" />
       <script-mode>FILE</script-mode>
@@ -6193,7 +6177,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRowMapperTest.mapRow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerServiceTest.addCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-app" />
       <extension name="coverage">
         <pattern>
@@ -6202,8 +6186,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.reda.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.reda.customer.CustomerRowMapperTest" />
-      <option name="METHOD_NAME" value="mapRow" />
+      <option name="MAIN_CLASS_NAME" value="com.reda.customer.CustomerServiceTest" />
+      <option name="METHOD_NAME" value="addCustomer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -6255,8 +6239,8 @@
     </configuration>
     <list>
       <item itemvalue="Database Script.V1__Initial_Setup.sql" />
+      <item itemvalue="JUnit.CustomerServiceTest.addCustomer" />
       <item itemvalue="JUnit.TestContainerTest" />
-      <item itemvalue="JUnit.CustomerRowMapperTest.mapRow" />
       <item itemvalue="JUnit.customer in spring-app" />
       <item itemvalue="JUnit.journeyControler in spring-app" />
       <item itemvalue="JUnit.CustomerIntegrationTest" />
@@ -6264,11 +6248,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.journeyControler in spring-app" />
         <item itemvalue="JUnit.customer in spring-app" />
+        <item itemvalue="JUnit.CustomerServiceTest.addCustomer" />
+        <item itemvalue="JUnit.journeyControler in spring-app" />
         <item itemvalue="JUnit.TestContainerTest" />
         <item itemvalue="JUnit.CustomerIntegrationTest" />
-        <item itemvalue="JUnit.CustomerRowMapperTest.mapRow" />
       </list>
     </recent_temporary>
   </component>

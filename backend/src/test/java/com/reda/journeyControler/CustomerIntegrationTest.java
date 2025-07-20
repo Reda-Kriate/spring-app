@@ -33,7 +33,7 @@ public class CustomerIntegrationTest {
         String gender = "male";
         //create registration request
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name,age,email,gender
+                name,age,email, "password", gender
         );
         //send a post request
         webTestClient.post()
@@ -88,7 +88,7 @@ public class CustomerIntegrationTest {
         String gender = "male";
         //create registration request
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name,age,email,gender
+                name,age,email, "password", gender
         );
         //send a post request
         webTestClient.post()
@@ -142,7 +142,7 @@ public class CustomerIntegrationTest {
         String gender = "male";
         //create registration request
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                name,age,email,gender
+                name,age,email, "password", gender
         );
         //send a post request
         webTestClient.post()

@@ -11,7 +11,8 @@ import java.util.List;
 @RequestMapping("/api/v1/customer")
 public class CustomerControl {
     private final CustomerService customerSrv;
-    private final JWTUtil jwtUtil;
+    private final JWTUtil jwtUtil
+            ;
 
     public CustomerControl(CustomerService customerSrv, JWTUtil jwtUtil) {
         this.customerSrv = customerSrv;

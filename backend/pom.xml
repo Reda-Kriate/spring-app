@@ -149,8 +149,13 @@
 			<version>0.12.6</version>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
 
-<!--		end of jwt dependencies-->
+		<!--		end of jwt dependencies-->
 
 	</dependencies>
 

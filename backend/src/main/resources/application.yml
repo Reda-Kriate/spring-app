@@ -20,3 +20,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+logging:
+  level:
+    org:
+      springframework:
+        security:
+          DEBUG

@@ -1,7 +1,6 @@
 package com.reda.security;
 
-import com.reda.JWT.JwtAuthentificationFilter;
-import jakarta.servlet.http.HttpServletResponse;
+import com.reda.JWT.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -12,18 +11,16 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
-
 @Configuration
 @EnableWebSecurity
 public class SecurityFilterChainConfig {
 
     private final AuthenticationProvider authenticationProvider;
-    private final JwtAuthentificationFilter jwtAuthentificationFilter;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
-    public SecurityFilterChainConfig(AuthenticationProvider authenticationProvider, JwtAuthentificationFilter jwtAuthentificationFilter) {
+    public SecurityFilterChainConfig(AuthenticationProvider authenticationProvider, JwtAuthenticationFilter jwtAuthenticationFilter) {
         this.authenticationProvider = authenticationProvider;
-        this.jwtAuthentificationFilter = jwtAuthentificationFilter;
+        this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
 
     @Bean
@@ -38,7 +35,7 @@ public class SecurityFilterChainConfig {
                         sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Configure la politique de session (stateless car JWT)
                 )
                 .authenticationProvider(authenticationProvider) //Mon DaoAuthenticationProvider personnalisé
-                .addFilterBefore(jwtAuthentificationFilter, UsernamePasswordAuthenticationFilter.class) //Injecte ton JwtAuthenticationFilter avant l’authentification par username/password
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) //Injecte ton JwtAuthenticationFilter avant l’authentification par username/password
                 .build();
     }
 }

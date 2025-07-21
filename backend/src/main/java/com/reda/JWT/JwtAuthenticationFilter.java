@@ -16,13 +16,13 @@ import reactor.util.annotation.NonNull;
 import java.io.IOException;
 
 @Component
-public class JwtAuthentificationFilter extends OncePerRequestFilter {
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JWTUtil jwtUtil;
 
     private final UserDetailsService userDetailsService;
 
-    public JwtAuthentificationFilter(JWTUtil jwtUtil, UserDetailsService userDetailsService) {
+    public JwtAuthenticationFilter(JWTUtil jwtUtil, UserDetailsService userDetailsService) {
         this.jwtUtil = jwtUtil;
         this.userDetailsService = userDetailsService;
     }
@@ -46,13 +46,16 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 
         if(subject != null && SecurityContextHolder.getContext().getAuthentication() == null){
             UserDetails userDetails = userDetailsService.loadUserByUsername(subject);
-
+            //if Token Authorization est valide
             if(jwtUtil.isTokenValid(jwt,userDetails.getUsername())){
 
+                //Cree Token d'Authentication
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                         userDetails,null,userDetails.getAuthorities()
                 );
+                //build details
                 authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                //creer le context de security pour Token d'Athentication
                 SecurityContextHolder.getContext().setAuthentication(authenticationToken);
             }
         }

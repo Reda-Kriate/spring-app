@@ -7,6 +7,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.ApplicationContext;
 import com.reda.customer.testContConfig.AbstractTestcontainers;
+import org.springframework.context.annotation.Import;
 
 import java.util.UUID;
 
@@ -15,17 +16,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Import({TestConfig.class})
 class CustomerRepositoryTest extends AbstractTestcontainers {
 
     @Autowired
     private CustomerRepository underTest;
 
-//    @Autowired
+    @Autowired
     private ApplicationContext applicationContext;
 
     @BeforeEach
     void setUp() {
-        underTest.deleteAll();
+//        underTest.deleteAll();
         System.out.println("bean count : " + applicationContext.getBeanDefinitionCount());
     }
 

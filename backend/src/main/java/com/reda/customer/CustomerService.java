@@ -8,25 +8,33 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CustomerService {
 
     private final DaoCustomerInt daoCustomerInt;
+    private final CustomerDTOMapper customerDTOMapper;
     private final PasswordEncoder passwordEncoder;
 
     public final String variable = "jdbc";
-    public CustomerService(@Qualifier(variable) DaoCustomerInt daoCustomerInt , PasswordEncoder passwordEncoder) {
+
+    public CustomerService(@Qualifier(variable) DaoCustomerInt daoCustomerInt, CustomerDTOMapper customerDTOMapper , PasswordEncoder passwordEncoder) {
         this.daoCustomerInt = daoCustomerInt;
+        this.customerDTOMapper = customerDTOMapper;
         this.passwordEncoder = passwordEncoder;
+
     }
 
-    public List<Customer> getAllCustomers(){
-        return daoCustomerInt.selectAllCustomers();
+    public List<CustomerDTO> getAllCustomers(){
+        return daoCustomerInt.selectAllCustomers()
+                .stream()
+                .map(customerDTOMapper)
+                .collect(Collectors.toList());
     }
 
-    public Customer getCustomersById(Integer id){
-        return daoCustomerInt.selectById(id)
+    public CustomerDTO getCustomersById(Integer id){
+        return daoCustomerInt.selectById(id).map(customerDTOMapper)
                 .orElseThrow(()-> new NotFoundException("customer with id [%s] not found".formatted(id)));
     }
 
@@ -53,7 +61,8 @@ public class CustomerService {
 
     public void updateById(Integer id,CustomerUpdateRegistration update){
         boolean changes = false;
-        Customer customer = getCustomersById(id);
+        Customer customer = daoCustomerInt.selectById(id)
+                .orElseThrow(()-> new NotFoundException("customer with id [%s] not found".formatted(id)));
 
         if(update.name() != null && !update.name().equals(customer.getName())){
             customer.setName(update.name());

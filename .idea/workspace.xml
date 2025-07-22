@@ -11,12 +11,7 @@
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/De3bol.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/JWT/JwtAuthentificationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/JWT/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/security/SecurityFilterChainConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/security/SecurityFilterChainConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/reda/customer/CustomerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/reda/journeyControler/CustomerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/reda/journeyControler/CustomerIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
@@ -6056,6 +6051,7 @@
     "JUnit.CustomerControlTest.canUpdateACustomer.executor": "Run",
     "JUnit.CustomerControlTest.executor": "Run",
     "JUnit.CustomerIntegrationTest.canDeleteACustomer.executor": "Run",
+    "JUnit.CustomerIntegrationTest.canRegisterACustomer.executor": "Run",
     "JUnit.CustomerIntegrationTest.executor": "Run",
     "JUnit.CustomerJdbcTemplateDataAccessServiceTest.deleteCustomer.executor": "Run",
     "JUnit.CustomerJdbcTemplateDataAccessServiceTest.executor": "Debug",
@@ -6167,17 +6163,34 @@
       <data-source id="d2699e0f-3a31-421e-9eb3-a97f89b18418" />
       <method v="2" />
     </configuration>
-    <configuration name="CustomerRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerIntegrationTest.canDeleteACustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.reda.customer.*" />
+          <option name="PATTERN" value="com.reda.journeyControler.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.reda.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.reda.customer.CustomerRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.reda.journeyControler" />
+      <option name="MAIN_CLASS_NAME" value="com.reda.journeyControler.CustomerIntegrationTest" />
+      <option name="METHOD_NAME" value="canDeleteACustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerIntegrationTest.canRegisterACustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reda.journeyControler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reda.journeyControler" />
+      <option name="MAIN_CLASS_NAME" value="com.reda.journeyControler.CustomerIntegrationTest" />
+      <option name="METHOD_NAME" value="canRegisterACustomer" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -6213,14 +6226,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="customer in spring-app" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-app" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/backend/src/test/java/com/reda/customer" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="journeyControler in spring-app" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-app" />
       <option name="TEST_OBJECT" value="directory" />
@@ -6246,20 +6251,20 @@
     </configuration>
     <list>
       <item itemvalue="Database Script.V1__Initial_Setup.sql" />
+      <item itemvalue="JUnit.CustomerIntegrationTest.canDeleteACustomer" />
+      <item itemvalue="JUnit.CustomerIntegrationTest.canRegisterACustomer" />
       <item itemvalue="JUnit.CustomerServiceTest" />
       <item itemvalue="JUnit.CustomerServiceTest.getAllCustomers" />
       <item itemvalue="JUnit.journeyControler in spring-app" />
-      <item itemvalue="JUnit.CustomerRepositoryTest" />
-      <item itemvalue="JUnit.customer in spring-app" />
       <item itemvalue="Spring Boot.springApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerIntegrationTest.canDeleteACustomer" />
+        <item itemvalue="JUnit.CustomerIntegrationTest.canRegisterACustomer" />
         <item itemvalue="JUnit.CustomerServiceTest" />
         <item itemvalue="JUnit.CustomerServiceTest.getAllCustomers" />
         <item itemvalue="JUnit.journeyControler in spring-app" />
-        <item itemvalue="JUnit.customer in spring-app" />
-        <item itemvalue="JUnit.CustomerRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -6350,7 +6355,7 @@
       <workItem from="1751478791293" duration="26811000" />
       <workItem from="1751996404556" duration="10918000" />
       <workItem from="1752428067864" duration="15312000" />
-      <workItem from="1753068086333" duration="14359000" />
+      <workItem from="1753068086333" duration="26344000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

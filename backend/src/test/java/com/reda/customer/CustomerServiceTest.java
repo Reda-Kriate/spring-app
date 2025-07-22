@@ -59,9 +59,6 @@ class CustomerServiceTest {
         //WHEN
         CustomerDTO expected = customerDTOMapper.apply(customer);
         CustomerDTO actual = underTest.getCustomersById(id);
-
-
-
         //THEN
         assertThat(actual).isEqualTo(expected);
     }

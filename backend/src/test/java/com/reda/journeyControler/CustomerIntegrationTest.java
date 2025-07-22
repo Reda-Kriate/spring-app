@@ -2,12 +2,14 @@ package com.reda.journeyControler;
 
 import com.github.javafaker.Faker;
 import com.reda.customer.Customer;
+import com.reda.customer.CustomerDTO;
 import com.reda.customer.CustomerRegistrationRequest;
 import com.reda.customer.CustomerUpdateRegistration;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Mono;
@@ -35,47 +37,59 @@ public class CustomerIntegrationTest {
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
                 name,age,email, "password", gender
         );
-        //send a post request
-        webTestClient.post()
+        //send a post request et exctraction de Token
+        String jwtToken = webTestClient.post()
                 .uri("/api/v1/customer")
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(Mono.just(request) , CustomerRegistrationRequest.class)
-                .exchange()
-                .expectStatus()
-                .isOk();
-        //get all customers
-        List<Customer> allCustomers = webTestClient.get()
-                .uri("/api/v1/customer")
-                .accept(MediaType.APPLICATION_JSON)
+                .body(Mono.just(request), CustomerRegistrationRequest.class)
                 .exchange()
                 .expectStatus()
                 .isOk()
-                .expectBodyList(new ParameterizedTypeReference<Customer>(){})
+                .returnResult(Void.class)
+                .getResponseHeaders()
+                .get(HttpHeaders.AUTHORIZATION)
+                .get(0);
+
+        //get all customers
+        List<CustomerDTO> allCustomers = webTestClient.get()
+                .uri("/api/v1/customer")
+                .accept(MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.AUTHORIZATION,String.format("Bearer %s",jwtToken))
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .expectBodyList(new ParameterizedTypeReference<CustomerDTO>(){})
                 .returnResult()
                 .getResponseBody();
-        //make sure that customer present
-        Customer expect = new Customer(
-                name,age,email, "password", gender
-        );
-        assertThat(allCustomers)
-                .usingRecursiveFieldByFieldElementComparatorIgnoringFields("id")
-                .contains(expect);
+
         //get customer by id
         int id = allCustomers.stream()
-                .filter(c->c.getEmail().equals(email))
-                .map(c->c.getId())
+                .filter(c->c.email().equals(email))
+                .map(c->c.id())
                 .findFirst()
                 .orElseThrow();
-        expect.setId(id);
+        //make sure that customer present
+        CustomerDTO expect = new CustomerDTO(
+                id,
+                name,
+                age,
+                email,
+                gender,
+                List.of("ROLE_USER"),
+                email
+        );
+        assertThat(allCustomers)
+                .contains(expect);
 
         webTestClient.get()
                 .uri("/api/v1/customer/{id}",id)
                 .accept(MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.AUTHORIZATION,String.format("Bearer %s",jwtToken))
                 .exchange()
                 .expectStatus()
                 .isOk()
-                .expectBody(new ParameterizedTypeReference<Customer>(){})
+                .expectBody(new ParameterizedTypeReference<CustomerDTO>(){})
                 .isEqualTo(expect);
     }
     @Test

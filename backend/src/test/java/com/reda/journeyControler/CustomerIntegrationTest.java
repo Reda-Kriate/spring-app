@@ -104,6 +104,9 @@ public class CustomerIntegrationTest {
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
                 name,age,email, "password", gender
         );
+        CustomerRegistrationRequest request2 = new CustomerRegistrationRequest(
+                name,age,email+".maroc", "password", gender
+        );
         //send a post request
         webTestClient.post()
                 .uri("/api/v1/customer")
@@ -113,10 +116,25 @@ public class CustomerIntegrationTest {
                 .exchange()
                 .expectStatus()
                 .isOk();
+
+        String jwtToken = webTestClient.post()
+                .uri("/api/v1/customer")
+                .accept(MediaType.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Mono.just(request2), CustomerRegistrationRequest.class)
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .returnResult(Void.class)
+                .getResponseHeaders()
+                .get(HttpHeaders.AUTHORIZATION)
+                .get(0);
+
         //get all customers
         List<Customer> allCustomers = webTestClient.get()
                 .uri("/api/v1/customer")
                 .accept(MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.AUTHORIZATION,String.format("Bearer %s",jwtToken))
                 .exchange()
                 .expectStatus()
                 .isOk()
@@ -133,6 +151,7 @@ public class CustomerIntegrationTest {
 
         webTestClient.delete()
                 .uri("/api/v1/customer/{id}",id)
+                .header(HttpHeaders.AUTHORIZATION,String.format("Bearer %s",jwtToken))
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectStatus()
@@ -141,6 +160,7 @@ public class CustomerIntegrationTest {
         webTestClient.get()
                 .uri("/api/v1/customer/{id}",id)
                 .accept(MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.AUTHORIZATION,String.format("Bearer %s",jwtToken))
                 .exchange()
                 .expectStatus()
                 .isNotFound();
@@ -159,18 +179,23 @@ public class CustomerIntegrationTest {
                 name,age,email, "password", gender
         );
         //send a post request
-        webTestClient.post()
+        String jwtToken = webTestClient.post()
                 .uri("/api/v1/customer")
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(Mono.just(request) , CustomerRegistrationRequest.class)
+                .body(Mono.just(request), CustomerRegistrationRequest.class)
                 .exchange()
                 .expectStatus()
-                .isOk();
+                .isOk()
+                .returnResult(Void.class)
+                .getResponseHeaders()
+                .get(HttpHeaders.AUTHORIZATION)
+                .get(0);
         //get all customers
         List<Customer> allCustomers = webTestClient.get()
                 .uri("/api/v1/customer")
                 .accept(MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.AUTHORIZATION,String.format("Bearer %s",jwtToken))
                 .exchange()
                 .expectStatus()
                 .isOk()
@@ -191,6 +216,7 @@ public class CustomerIntegrationTest {
 
         webTestClient.put()
                 .uri("/api/v1/customer/{id}",id)
+                .header(HttpHeaders.AUTHORIZATION,String.format("Bearer %s",jwtToken))
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(Mono.just(update), CustomerUpdateRegistration.class)
@@ -201,6 +227,7 @@ public class CustomerIntegrationTest {
         Customer updaterCust =  webTestClient.get()
                 .uri("/api/v1/customer/{id}",id)
                 .accept(MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.AUTHORIZATION,String.format("Bearer %s",jwtToken))
                 .exchange()
                 .expectStatus()
                 .isOk()

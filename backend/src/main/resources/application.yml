@@ -5,6 +5,8 @@ server:
 cors:
   allowed-methods: "*"
   allowed-origins: "*"
+  allowed-headers: "*"
+  exposed-origins: "*"
 spring:
   main:
     web-application-type: servlet

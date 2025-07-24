@@ -11,12 +11,6 @@
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/JWT/JWTUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/JWT/JWTUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerUpdateRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerUpdateRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/exception/DefaultExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/exception/DefaultExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/security/SecurityFilterChainConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/security/SecurityFilterChainConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce" afterDir="false" />
@@ -6367,7 +6361,7 @@
       <workItem from="1751478791293" duration="26811000" />
       <workItem from="1751996404556" duration="10918000" />
       <workItem from="1752428067864" duration="15312000" />
-      <workItem from="1753068086333" duration="47414000" />
+      <workItem from="1753068086333" duration="50930000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

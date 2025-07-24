@@ -34,7 +34,7 @@ public class SecurityFilterChainConfig {
         return http.csrf(csrf -> csrf.disable()) //Désactive la protection CSRF
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.POST, "/api/v1/customer").permitAll()//La route POST /api/v1/customer est publique.
+                        .requestMatchers(HttpMethod.POST, "/api/v1/customer","/api/v1/auth/login").permitAll()//La route POST /api/v1/customer est publique.
                         .anyRequest()
                         .authenticated()) // Toutes les autres requêtes doivent être authentifiées.
                 .sessionManagement(sess ->

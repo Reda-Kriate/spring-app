@@ -23,7 +23,6 @@ public class CustomerService {
         this.daoCustomerInt = daoCustomerInt;
         this.customerDTOMapper = customerDTOMapper;
         this.passwordEncoder = passwordEncoder;
-
     }
 
     public List<CustomerDTO> getAllCustomers(){

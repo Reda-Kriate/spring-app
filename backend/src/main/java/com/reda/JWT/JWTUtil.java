@@ -11,6 +11,7 @@ import java.security.Key;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -20,6 +21,9 @@ public class JWTUtil {
             "redakriate_123456789_redakriate_123456789_redakriate_123456789_redakriate_123456789";
     public String issueToken(String subject){
         return issueToken(subject,Map.of());
+    }
+    public String issueToken(String username, List<String> scopes) {
+        return issueToken(username,Map.of("scopes",scopes));
     }
 //Creation de token avec scopes (ROLE...)
     public String issueToken(String subject, String ...scopes){
@@ -70,4 +74,5 @@ public class JWTUtil {
         Date today = Date.from(Instant.now());
         return getClaims(jwt).getExpiration().before(today);
     }
+
 }

@@ -16,7 +16,8 @@ public class AuthService {
     private final CustomerDTOMapper customerDTOMapper;
     private final JWTUtil jwtUtil;
 
-    public AuthService(AuthenticationManager authenticationManager, CustomerDTOMapper customerDTOMapper, JWTUtil jwtUtil) {
+    public AuthService(AuthenticationManager authenticationManager,
+                       CustomerDTOMapper customerDTOMapper, JWTUtil jwtUtil) {
         this.authenticationManager = authenticationManager;
         this.customerDTOMapper = customerDTOMapper;
         this.jwtUtil = jwtUtil;

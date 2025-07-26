@@ -1,9 +1,10 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import {ApplicationConfig, importProvidersFrom, provideZoneChangeDetection} from '@angular/core';
 import { provideRouter } from '@angular/router';import { providePrimeNG } from 'primeng/config';
 import Lara from '@primeuix/themes/lara';
 
 import { routes } from './app.routes';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
+import {HttpClientModule} from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true })
@@ -13,5 +14,6 @@ export const appConfig: ApplicationConfig = {
       theme: {
         preset: Lara
       }
-    })],
+    }),
+    importProvidersFrom(HttpClientModule)],
 };

@@ -11,11 +11,17 @@
       </div>
 
       <div class="field">
+        <p-message
+          *ngIf="errMsg"
+          severity="error"
+          styleClass="mb-2"
+        >{{errMsg}}</p-message>
         <label
           for="username"
         >Username</label>
         <input
         id="username"
+        [(ngModel)]="authenticationRequest.username"
         pInputText
         type="text"
         class="w-full">
@@ -27,11 +33,13 @@
         >Password</label>
         <input
         id="password"
+        [(ngModel)]="authenticationRequest.password"
         pInputText
         type="password"
         class="w-full">
       </div>
       <button pButton
+              (click)="login()"
               label="Login"
               class="w-full"></button>
       <button pButton

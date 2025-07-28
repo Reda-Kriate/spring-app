@@ -1,6 +1,6 @@
 import {CustomerDTO} from './customer-dto';
 
 export class authenticationResponse{
-  token?:String;
+  token?:string;
   customerDTO?:CustomerDTO
 }

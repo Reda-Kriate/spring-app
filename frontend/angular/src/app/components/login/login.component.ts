@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import {AuthenticationService} from '../../services/authentication/authentication.service';
 import {Message} from 'primeng/message';
 import {NgIf} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -21,15 +22,22 @@ import {NgIf} from '@angular/common';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
+
 export class LoginComponent {
-  authenticationRequest : AuthenticationRequest = {};
-  constructor(private authService : AuthenticationService) {}
+  authenticationRequest : AuthenticationRequest = {}
+  constructor(
+    private authService : AuthenticationService,
+    private router:Router
+  ) {}
   errMsg?:string;
   login(){
     this.errMsg='';
     this.authService.login(this.authenticationRequest)
       .subscribe({
-        next: (authResponse)=> console.log(authResponse),
+        next: (authResponse)=>{
+          localStorage.setItem('user',JSON.stringify(authResponse));
+          this.router.navigate(['customer'])
+        },
         error:(err)=>{
           if(err.error.statusCode===401){
             this.errMsg='Login or / and password is incorrect';

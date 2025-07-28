@@ -6,7 +6,7 @@ on:
     paths:
       - backend/**
     branches:
-      - main
+      - de3bol
 permissions:
   contents: write
 

@@ -26,8 +26,9 @@
           icon="pi pi-plus"
           (click)="visible2 = true"
           > Create customer</button>
-        <div>
-          customer cards ....
+        <div *ngFor="let customer of customers"
+             class="text-gray-700">
+          {{customer.name + ' ' + customer.age }}
         </div>
       </div>
     </div>

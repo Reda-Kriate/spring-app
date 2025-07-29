@@ -1,0 +1,35 @@
+<p-card [style]="{ width: '316px'}" styleClass="text-center">
+  <ng-template #header>
+    <div>
+      <img alt="Card"
+           class="border-round-top cover"
+           src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+    </div>
+    <div class="flex justify-content-center">
+      <img alt="Card"
+           class="profil"
+           src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+    </div>
+  </ng-template>
+
+  <ng-template #content>
+    <p-badge
+    [value]="''+customerIndex"
+    >
+    </p-badge>
+    <h2>{{customerDTO.name}}</h2>
+    <p class="text-gray-700">{{customerDTO.name}}</p>
+    <p class="text-gray-700">{{ customerDTO.age }} | {{customerDTO.gender}}</p>
+  </ng-template>
+  <ng-template #footer>
+    <button
+    pButton
+    label="Update"
+  ></button>
+    <button
+      pButton
+      label="Delete"
+      class="p-button-outlined p-button-danger ml-2"
+    ></button>
+  </ng-template>
+</p-card>

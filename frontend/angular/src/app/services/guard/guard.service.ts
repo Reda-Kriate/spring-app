@@ -29,8 +29,6 @@ export class GuardService implements CanActivate {
         const isTokenNotExpired = !jwtHelper.isTokenExpired(token);
         if (isTokenNotExpired) {
           return true;
-        }else{
-          this.router.navigate(['login']);
         }
       }
     }

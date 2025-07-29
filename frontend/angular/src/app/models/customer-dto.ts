@@ -4,6 +4,6 @@ export interface CustomerDTO{
   age?:number,
   email?:string,
   gender?: "MALE" | "FEMALE",
-  roles:string[],
+  roles?:string[],
   username?:string
 }

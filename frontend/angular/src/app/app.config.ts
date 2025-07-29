@@ -4,7 +4,8 @@ import Lara from '@primeuix/themes/lara';
 
 import { routes } from './app.routes';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {HttpInterceptorService} from './services/interceptor/http-interceptor.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true })
@@ -15,5 +16,10 @@ export const appConfig: ApplicationConfig = {
         preset: Lara
       }
     }),
-    importProvidersFrom(HttpClientModule)],
+    importProvidersFrom(HttpClientModule),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }],
 };

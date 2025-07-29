@@ -8,6 +8,7 @@ import {ManagementCustomerComponent} from '../management-customer/management-cus
 import {CustomerService} from '../../services/customer/customer.service';
 import {CustomerDTO} from '../../models/customer-dto';
 import {NgForOf} from '@angular/common';
+import {CustomerCardComponent} from '../customer-card/customer-card.component';
 
 @Component({
   selector: 'app-customer',
@@ -18,6 +19,7 @@ import {NgForOf} from '@angular/common';
     Ripple,
     Drawer,
     ManagementCustomerComponent,
+    CustomerCardComponent,
     NgForOf
   ],
   templateUrl: './customer.component.html',

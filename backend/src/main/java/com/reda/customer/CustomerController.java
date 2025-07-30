@@ -9,11 +9,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/customer")
-public class CustomerControl {
+public class CustomerController {
     private final CustomerService customerSrv;
     private final JWTUtil jwtUtil;
 
-    public CustomerControl(CustomerService customerSrv, JWTUtil jwtUtil) {
+    public CustomerController(CustomerService customerSrv, JWTUtil jwtUtil) {
         this.customerSrv = customerSrv;
         this.jwtUtil = jwtUtil;
     }

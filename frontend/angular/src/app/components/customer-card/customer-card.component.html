@@ -14,11 +14,11 @@
 
   <ng-template #content>
     <p-badge
-    [value]="''+customerIndex"
+    [value]="''+(customerIndex + 1)"
     >
     </p-badge>
     <h2>{{customerDTO.name}}</h2>
-    <p class="text-gray-700">{{customerDTO.name}}</p>
+    <p class="text-gray-700">{{customerDTO.email}}</p>
     <p class="text-gray-700">{{ customerDTO.age }} | {{customerDTO.gender}}</p>
   </ng-template>
   <ng-template #footer>

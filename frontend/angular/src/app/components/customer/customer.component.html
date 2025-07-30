@@ -1,14 +1,11 @@
-
-
-
-
-
-
 <p-drawer
           [(visible)]="visible2"
           position="right"
           styleClass="w-8 md:w-80 lg:w-[30rem]">
-<app-management-customer></app-management-customer>
+<app-management-customer
+  [customerRegistration]="customer"
+ (submit)="save($event)"
+></app-management-customer>
 </p-drawer>
 <div class="flex align-items-stretch" style="height: 99vh;">
   <div class="flex flex-column align-items-stretch border-right-1 col-2 border-gray-200">
@@ -26,13 +23,18 @@
           icon="pi pi-plus"
           (click)="visible2 = true"
           > Create customer</button>
-      <app-customer-card
-      *ngFor="let customer of customers , let index = index"
-      [customerDTO]="customer"
-      [customerIndex]="index"
-      >
+        <div class="flex justify-content-center align-items-center flex-wrap gap-4 mt-4">
+          <app-customer-card
+            *ngFor="let customer of customers , let index = index"
+            [customerDTO]="customer"
+            [customerIndex]="index"
+          >
 
-      </app-customer-card>
+          </app-customer-card>
+        </div>
+
       </div>
     </div>
 </div>
+<p-toast [breakpoints]="{ '920px': { width: '100%', right: '0', left: '0' } }" />
+

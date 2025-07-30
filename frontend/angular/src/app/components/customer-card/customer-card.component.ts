@@ -21,6 +21,6 @@ export class CustomerCardComponent {
 @Input()
   customerDTO : CustomerDTO = {};
 @Input()
-  customerIndex=0;
+  customerIndex : number=0;
 
 }

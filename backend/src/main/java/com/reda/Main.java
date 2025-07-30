@@ -33,7 +33,7 @@ public class Main {
                     FirstName+"."+LastName+"@hbib.com",
                     passwordEncoder.encode(UUID.randomUUID().toString()),
                     "Male");
-            customerRepository.save(customer);
+//            customerRepository.save(customer);
         };
     }
 

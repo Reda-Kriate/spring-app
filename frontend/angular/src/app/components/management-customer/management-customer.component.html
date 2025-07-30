@@ -6,6 +6,7 @@
     </label>
     <input
         id="firstname"
+        [(ngModel)]="customerRegistration.name"
         pInputText
         placeholder="Reda"
         type="text"
@@ -13,23 +14,12 @@
     >
   </div>
   <div class="field">
-    <label for="email">
-      Name
-    </label>
-    <input
-        id="email"
-        pInputText
-        placeholder="kriatereda@gmail.com"
-        type="email"
-        class="w-full"
-    >
-  </div>
-  <div class="field">
     <label for="age">
-      Name
+      Age
     </label>
     <input
         id="age"
+        [(ngModel)]="customerRegistration.age"
         pInputText
         placeholder="22"
         type="number"
@@ -37,11 +27,25 @@
     >
   </div>
   <div class="field">
+    <label for="email">
+      Email
+    </label>
+    <input
+        id="email"
+        [(ngModel)]="customerRegistration.email"
+        pInputText
+        placeholder="kriatereda@gmail.com"
+        type="email"
+        class="w-full"
+    >
+  </div>
+  <div class="field">
     <label for="password">
-      Name
+      Password
     </label>
     <input
         id="password"
+        [(ngModel)]="customerRegistration.password"
         pInputText
         placeholder="Abab8@.*"
         type="password"
@@ -50,17 +54,20 @@
   </div>
   <div class="field">
     <label for="gender">
-      Name
+      Gender
     </label>
     <select
+      [(ngModel)]="customerRegistration.gender"
     id="gender"
     class="w-full custom-select ">
-      <option>Select an option</option>
-      <option>Male</option>
-      <option>Female</option>
+      <option value="">Select an option</option>
+      <option value="MALE">MALE</option>
+      <option value="FEMALE">FEMALE</option>
     </select>
   </div>
   <button
+    [disabled]="!isCustomerValid"
+    (click)="onSubmit()"
     pButton
     label="Submit"
     class="w-full "

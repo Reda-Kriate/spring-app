@@ -3,12 +3,12 @@
     <div>
       <img alt="Card"
            class="border-round-top cover"
-           src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+           src="https://cdn.shopify.com/s/files/1/0548/7244/1000/files/88_ff6732ed-9003-4a2c-b0ba-575421f29b5b_1024x1024.jpg?v=1651190399" />
     </div>
     <div class="flex justify-content-center">
       <img alt="Card"
            class="profil"
-           src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+           [src]="customerImage" />
     </div>
   </ng-template>
 
@@ -25,11 +25,17 @@
     <button
     pButton
     label="Update"
+    (click)="updateButton()"
   ></button>
     <button
       pButton
       label="Delete"
       class="p-button-outlined p-button-danger ml-2"
+      (click)="deleteButton()"
+      [outlined]="true"
     ></button>
+
   </ng-template>
 </p-card>
+
+

@@ -28,13 +28,67 @@
             *ngFor="let customer of customers , let index = index"
             [customerDTO]="customer"
             [customerIndex]="index"
-          >
+            (delete)="delete($event)"
+            (update)="update($event)"
 
-          </app-customer-card>
+          ></app-customer-card>
         </div>
 
       </div>
     </div>
 </div>
 <p-toast [breakpoints]="{ '920px': { width: '100%', right: '0', left: '0' } }" />
+<p-toast />
 
+<p-confirmDialog
+  header="Confirmation"
+  icon="pi pi-exclamation-triangle"
+  acceptLabel="Delete"
+  acceptButtonStyleClass="p-button-danger"
+  acceptIcon="pi pi-trash"
+  rejectLabel="Cancel"></p-confirmDialog>
+
+<p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '40rem'}" >
+  <ng-template #header>
+    <div class="inline-flex items-center justify-center gap-2">
+      <span class="font-bold whitespace-nowrap text-2xl">Edit Profil</span>
+    </div>
+  </ng-template>
+
+  <span class="text-surface-500 dark:text-surface-400 block mb-8">Update informations.</span>
+
+  <div class="flex flex-column items-center gap-4 mb-4">
+    <label for="name" class="font-semibold w-24">Name</label>
+    <input pInputText id="name" class="flex-auto" autocomplete="off" [(ngModel)]="customerUpdate.name"  />
+  </div>
+
+  <div class="flex flex-column items-center gap-4 mb-4">
+    <label for="age" class="font-semibold w-24">Age</label>
+    <input pInputText type="number" id="age" class="flex-auto" autocomplete="off" [(ngModel)]="customerUpdate.age"  />
+  </div>
+
+  <div class="flex flex-column items-center gap-4 mb-4">
+    <label for="email" class="font-semibold w-24">Email</label>
+    <input pInputText id="email" type="email" class="flex-auto" autocomplete="off" [(ngModel)]="customerUpdate.email"  />
+  </div>
+
+  <div class="flex flex-column items-center gap-4 mb-2">
+    <label for="gender" class="font-semibold w-24">Gender</label>
+<!--    <input pInputText id="gender" class="flex-auto" autocomplete="off" [value]="customerUpdate.gender"  />-->
+    <select
+      pInputText
+      [(ngModel)]="customerUpdate.gender"
+      id="gender"
+      class="w-full custom-select ">
+      <option value="">Select an option</option>
+      <option value="MALE">MALE</option>
+      <option value="FEMALE">FEMALE</option>
+    </select>
+  </div>
+
+  <ng-template #footer>
+    <p-button label="Cancel" [text]="true" severity="secondary" (click)="visible = false" />
+    <p-button label="Save" (onClick)="saveUpdates(); showToast()" severity="success" (click)="visible = false" />
+  </ng-template>
+</p-dialog>
+<p-toast />

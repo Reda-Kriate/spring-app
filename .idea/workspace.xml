@@ -11,16 +11,12 @@
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerRegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerRegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerUpdateRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/reda/customer/CustomerUpdateRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/customer-card/customer-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/customer-card/customer-card.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/customer-card/customer-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/customer-card/customer-card.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/management-customer/management-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/management-customer/management-customer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/management-customer/management-customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/management-customer/management-customer.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/services/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/services/customer/customer.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" afterDir="false" />
@@ -6372,7 +6368,7 @@
       <workItem from="1751478791293" duration="26811000" />
       <workItem from="1751996404556" duration="10918000" />
       <workItem from="1752428067864" duration="15312000" />
-      <workItem from="1753068086333" duration="78015000" />
+      <workItem from="1753068086333" duration="84411000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

@@ -18,6 +18,7 @@ import {Dialog} from 'primeng/dialog';
 import {InputText} from 'primeng/inputtext';
 import {FormsModule} from '@angular/forms';
 import {CustomerUpdate} from '../../models/customerUpdate';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-customer',
@@ -33,7 +34,6 @@ import {CustomerUpdate} from '../../models/customerUpdate';
     Toast,
     ConfirmDialog,
     Button,
-    Avatar,
     Dialog,
     InputText,
     FormsModule
@@ -51,7 +51,8 @@ export class CustomerComponent implements OnInit{
   constructor(
     private customerService : CustomerService,
     private messageService : MessageService,
-    private confirmationService : ConfirmationService
+    private confirmationService : ConfirmationService,
+    private router : Router
   ) {}
 
   ngOnInit(): void {
@@ -85,15 +86,21 @@ export class CustomerComponent implements OnInit{
       message: `Do you want to delete customer with name ${customer.name}`,
       header: 'Delete customer',
 
-
       accept: () => {
         this.customerService.deleteCustomer(customer.id).subscribe({
           next:()=>{
+            const userStocked = localStorage.getItem('user');
+            if(userStocked){
+              const userId = JSON.parse(userStocked).customerDTO.id;
+              if(userId == customer.id){
+                localStorage.clear();
+                this.router.navigate(['login'])
+              }
+            }
             this.findAll();
             this.messageService.add({ severity: 'success', summary: 'Customer deleted', detail: `Customer ${customer.name} deleted successfully` });
           }
         })
-
       },
     });
   }

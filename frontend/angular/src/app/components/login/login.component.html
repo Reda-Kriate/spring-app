@@ -7,14 +7,19 @@
           class="mr-2 border-2 border-gray-500"
           size="xlarge"
           shape="circle"/>
-        <h2>Sign it to your account</h2>
+        @if (visible){
+          <h2>Sign it to your account</h2>
+        }
+        @if (!visible){
+          <h2>Create account</h2>
+        }
       </div>
 
-      <div class="field">
+      <div class="field" *ngIf="visible">
         <p-message
           *ngIf="errMsg"
           severity="error"
-          styleClass="mb-2"> {{errMsg}} </p-message>
+          styleClass="mb-2"> {{errMsg}}</p-message>
         <label
           for="username"
         >Username</label>
@@ -26,7 +31,7 @@
         class="w-full">
       </div>
 
-      <div class="field">
+      <div class="field" *ngIf="visible">
         <label
           for="password"
         >Password</label>
@@ -40,11 +45,99 @@
       <button pButton
               (click)="login()"
               label="Login"
-              class="w-full"></button>
+              class="w-full"
+              *ngIf="visible"
+      ></button>
       <button pButton
               label="Don't have an account? Sign in now"
               class="w-full p-button-link pl-0 text-left"
               [style.justify-content]="'flex-start'"
+              (click)="switchInterface(false)"
+              *ngIf="visible"
+      ></button>
+
+<!--      sign Up your account-->
+
+      <div class="field register-input" *ngIf="!visible">
+        <p-message
+          *ngIf="errMsg2"
+          severity="error"
+          styleClass="mb-2"> {{errMsg2}} </p-message>
+        <label
+          for="Name"
+        >Name</label>
+        <input
+          id="Name"
+          [(ngModel)]="customerReg.name"
+          pInputText
+          type="text"
+          class="w-full ">
+      </div>
+
+      <div class="field" *ngIf="!visible">
+        <label
+          for="age"
+        >Age</label>
+        <input
+          id="age"
+          [(ngModel)]="customerReg.age"
+          pInputText
+          type="number"
+          class="w-full">
+      </div>
+
+      <div class="field" *ngIf="!visible">
+        <label
+          for="email"
+        >Email</label>
+        <input
+          id="email"
+          [(ngModel)]="customerReg.email"
+          pInputText
+          type="email"
+          class="w-full">
+      </div>
+
+
+        <div class="field" *ngIf="!visible">
+          <label
+            for="password2"
+          >Password</label>
+          <input
+            id="password2"
+            [(ngModel)]="customerReg.password"
+            pInputText
+            type="password"
+            class="w-full">
+        </div>
+
+      <div class="field" *ngIf="!visible">
+        <label
+          for="gender"
+        >Gender</label>
+        <select
+          pInputText
+          [(ngModel)]="customerReg.gender"
+          id="gender"
+          class="w-full">
+          <option value="">Select an option</option>
+          <option value="MALE">MALE</option>
+          <option value="FEMALE">FEMALE</option>
+        </select>
+      </div>
+
+      <button pButton
+              (click)="signUp()"
+              label="Sign Up"
+              class="w-full"
+              *ngIf="!visible"
+      ></button>
+      <button pButton
+              label="Sign in to your exist account"
+              class="w-full p-button-link pl-0 text-left"
+              [style.justify-content]="'flex-start'"
+              (click)="switchInterface(true)"
+              *ngIf="!visible"
       ></button>
     </div>
   </div>
@@ -58,3 +151,4 @@
       src="https://user-images.githubusercontent.com/40702606/215539167-d7006790-b880-4929-83fb-c43fa74f429e.png">
   </div>
 </div>
+<p-toast />

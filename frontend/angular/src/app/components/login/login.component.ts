@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Output} from '@angular/core';
 import {Avatar} from 'primeng/avatar';
 import {InputText} from 'primeng/inputtext';
 import {ButtonDirective} from 'primeng/button';
@@ -8,6 +8,10 @@ import {AuthenticationService} from '../../services/authentication/authenticatio
 import {Message} from 'primeng/message';
 import {NgIf} from '@angular/common';
 import {Router} from '@angular/router';
+import {CustomerService} from '../../services/customer/customer.service';
+import {customerRegistrationRequest} from '../../models/customerRegistrationRequest';
+import {Toast} from 'primeng/toast';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-login',
@@ -17,19 +21,29 @@ import {Router} from '@angular/router';
     ButtonDirective,
     FormsModule,
     Message,
-    NgIf
+    NgIf,
+    Toast
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 
 export class LoginComponent {
+
   authenticationRequest : AuthenticationRequest = {}
+  errMsg?:string;
+  visible = true
+  customerReg : customerRegistrationRequest = {};
+  errMsg2?:string;
+
+
   constructor(
     private authService : AuthenticationService,
-    private router:Router
+    private router:Router,
+    private customerService : CustomerService,
+    private messageService: MessageService
   ) {}
-  errMsg?:string;
+
   login(){
     this.errMsg='';
     this.authService.login(this.authenticationRequest)
@@ -45,5 +59,35 @@ export class LoginComponent {
         }
       }
     );
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'User added', detail: 'User added successfully' });
+  }
+  checkFields(input : customerRegistrationRequest){
+    return input.name !== undefined && input.name !== null && input.name.length > 0 &&
+      input.email !== undefined && input.email !== null && input.email.length > 0 &&
+      input.password !== undefined && input.password !== null && input.password.length > 0 &&
+      input.gender !== undefined && input.gender !== null && input.gender.length > 0 &&
+      input.age !== undefined && input.age !== null && input.age > 0  ;
+  }
+  signUp() {
+    if(this.checkFields(this.customerReg)) {
+      this.customerService.saveCustomer(this.customerReg).subscribe({
+        next:()=>{
+            console.log(this.customerReg)
+            this.showSuccess();
+            this.visible=true;
+        },
+        error:()=>{
+          console.log("errooooor")
+          this.errMsg2 = 'There are items that require your attention';
+        }
+      })
+    }else{
+      this.errMsg2 = 'There are items that require your attention';
+    }
+  }
+  switchInterface(input : boolean) {
+    this.visible = input;
   }
 }

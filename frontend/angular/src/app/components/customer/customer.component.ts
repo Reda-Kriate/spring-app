@@ -71,9 +71,9 @@ export class CustomerComponent implements OnInit{
     if(customer){
       this.customerService.saveCustomer(customer).subscribe({
         next:() =>{
-          this.findAll();
-          this.visible2=false;
-          this.customer={};
+          this.findAll()
+          this.visible2=false
+          this.customer={}
           this.messageService.add({ severity: 'success',
             summary: 'Customer saved',
             detail: `Customer \`${customer.name}\` successfully saved` });

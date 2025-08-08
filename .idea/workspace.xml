@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed31411a-abea-4acc-82c8-20e752276997" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/reda/Main.java&#10;#&#9;src/main/java/com/reda/customer/CustomerJdbcTemplateDataAccessService.java">
+      <change afterPath="$PROJECT_DIR$/k8s/springapp-secret.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APP2/src/main/java/com/tp/APP1/controllers/AdminAchatValidationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../APP2/src/main/java/com/tp/APP1/controllers/AdminAchatValidationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../APP2/src/main/java/com/tp/APP1/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../APP2/src/main/java/com/tp/APP1/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/StudentHomeAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaLearn/goldLib/src/main/webapp/admin/ajAdm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/src/app/components/customer/customer.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManag/studentManagement/src/Interaction/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce" afterDir="false" />
@@ -81,8 +82,8 @@
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app-paths-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app-paths-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/_not-found/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/_not-found/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/_not-found/page_client-reference-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/_not-found/page_client-reference-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/cart/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/cart/page_client-reference-manifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/cart/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/cart/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/cart/page_client-reference-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/cart/page_client-reference-manifest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/page_client-reference-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/page_client-reference-manifest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/product-details/[Id]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/app/product-details/[Id]/page.js" afterDir="false" />
@@ -103,7 +104,6 @@
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/vendor-chunks/next.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/vendor-chunks/next.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/webpack-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/server/webpack-runtime.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/static/chunks/_error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/static/chunks/app/cart/page.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/static/chunks/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/static/chunks/app/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/static/chunks/app/sign-up/[[...sign-up]]/page.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/static/chunks/fallback/amp.js" beforeDir="false" />
@@ -5971,7 +5971,6 @@
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/static/webpack/webpack.ffa0eb5a773a745c.hot-update.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/static/webpack/webpack.fffea66d7deb9f31.hot-update.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/trace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/types/app/cart/page.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecommerce projects/ecommerce/.next/types/app/sign-up/[[...sign-up]]/page.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../next-app/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../next-app/app/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../next-app/app/posts/loading.js" beforeDir="false" />
@@ -5993,6 +5992,11 @@
         <option value="workflow" />
         <option value="Record" />
         <option value="Class" />
+        <option value="Kubernetes Secret" />
+        <option value="Kubernetes ConfigMap" />
+        <option value="Kubernetes Deployment" />
+        <option value="Kubernetes Pod" />
+        <option value="Kubernetes Service" />
       </list>
     </option>
   </component>
@@ -6118,7 +6122,7 @@
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/redakriate/Desktop/SpringApp",
+    "last_opened_file_path": "/Users/redakriate/Desktop/SpringApp/k8s",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -6144,10 +6148,15 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/k8s" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/k8s/k8s case no localhost" />
+      <recent name="$PROJECT_DIR$/k8s" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/my-eb-deploy" />
@@ -6362,7 +6371,10 @@
       <workItem from="1751478791293" duration="26811000" />
       <workItem from="1751996404556" duration="10918000" />
       <workItem from="1752428067864" duration="15312000" />
-      <workItem from="1753068086333" duration="90697000" />
+      <workItem from="1753068086333" duration="93140000" />
+      <workItem from="1754417414458" duration="90000" />
+      <workItem from="1754495196745" duration="740000" />
+      <workItem from="1754653563434" duration="10521000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

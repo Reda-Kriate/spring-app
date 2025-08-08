@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-postgres-pod
+  labels:
+    app: spring-postgres
+spec:
+  containers:
+    - name: postgres
+      image: postgres:15
+      ports:
+        - containerPort: 5433
+      env:
+        - name: POSTGRES_USER
+          value: redakriate
+        - name: POSTGRES_PASSWORD
+          value: redareda
+        - name: POSTGRES_DB
+          value: customer
+      args: ["-p", "5433"]
+    - name: springboot
+      image: redakriate/spring-app:latest
+      ports:
+        - containerPort: 8081
+      env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://localhost:5433/customer
+        - name: SPRING_DATASOURCE_USERNAME
+          value: redakriate
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: redareda
+
